@@ -27,57 +27,12 @@
               <!-- Here you can add your items from the section-start of your toolbar -->
             </mobile-menu>
             <md-list>
-              <li class="md-list-item">
-                <a
-                  href="javascript:void(0)"
-                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
-                >
-                  <div class="md-list-item-content">
-                    <drop-down direction="down">
-                      <md-button
-                        slot="title"
-                        class="md-button md-button-link md-white md-simple dropdown-toggle"
-                        data-toggle="dropdown"
-                      >
-                        <i class="material-icons">apps</i>
-                        <p>Components</p>
-                      </md-button>
-                      <ul class="dropdown-menu dropdown-with-icons">
-                        <li>
-                          <a href="#/">
-                            <i class="material-icons">layers</i>
-                            <p>All Components</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://demos.creative-tim.com/vue-material-kit/documentation/"
-                          >
-                            <i class="material-icons">content_paste</i>
-                            <p>Documentation</p>
-                          </a>
-                        </li>
-                      </ul>
-                    </drop-down>
-                  </div>
-                </a>
-              </li>
-
-              <md-list-item
-                href="https://demos.creative-tim.com/vue-material-kit/documentation/"
-                target="_blank"
-              >
-                <i class="material-icons">content_paste</i>
-                <p>Documentation</p>
-              </md-list-item>
-
-              <md-list-item
-                href="javascript:void(0)"
-                @click="scrollToElement()"
-              >
-                <i class="material-icons">cloud_download</i>
-                <p>Download</p>
-              </md-list-item>
+              <router-link :to="{ name: 'index' }">
+                <md-list-item href="javascript:void(0)">
+                  <i class="material-icons">content_paste</i>
+                  <p>O mnie</p>
+                </md-list-item>
+              </router-link>
 
               <li class="md-list-item">
                 <a
@@ -92,7 +47,7 @@
                         data-toggle="dropdown"
                       >
                         <i class="material-icons">view_carousel</i>
-                        <p>Examples</p>
+                        <p>Projekty</p>
                       </md-button>
                       <ul class="dropdown-menu dropdown-with-icons">
                         <li>
