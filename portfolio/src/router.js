@@ -21,9 +21,10 @@ export default new Router({
       }
     },
     {
-      path: "/landing",
+      path: "/landing:project",
       name: "landing",
       components: { default: Landing, header: MainNavbar, footer: MainFooter },
+      params: true,
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: "black" }

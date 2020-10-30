@@ -50,22 +50,17 @@
                         <p>Projekty</p>
                       </md-button>
                       <ul class="dropdown-menu dropdown-with-icons">
-                        <li>
-                          <a href="#/landing">
+                        <li @click="routeFun('furryGame')">
+                          <a href="javascript:void(0)">
                             <i class="material-icons">view_day</i>
-                            <p>Landing Page</p>
+                            <p>Furry Game</p>
                           </a>
                         </li>
-                        <li>
-                          <a href="#/login">
+
+                        <li @click="routeFun('gameOfLife')">
+                          <a href="javascript:void(0)">
                             <i class="material-icons">fingerprint</i>
-                            <p>Login Page</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#/profile">
-                            <i class="material-icons">account_circle</i>
-                            <p>Profile Page</p>
+                            <p>Game Of Life</p>
                           </a>
                         </li>
                       </ul>
@@ -165,6 +160,12 @@ export default {
     },
   },
   methods: {
+    routeFun(name) {
+      this.$router.push({
+        name: "landing",
+        params: { project: name },
+      });
+    },
     bodyClick() {
       let bodyClick = document.getElementById("bodyClick");
 

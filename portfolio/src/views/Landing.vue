@@ -1,29 +1,9 @@
 <template>
   <div class="wrapper">
-    <parallax class="section page-header header-filter" :style="headerStyle">
-      <div class="container">
-        <div class="md-layout">
-          <div
-            class="md-layout-item md-size-50 md-small-size-70 md-xsmall-size-100"
-          >
-            <h1 class="title">Your Story Starts With Us.</h1>
-            <h4>
-              Every landing page needs a small description after the big bold
-              title, that's why we added this text here. Add here all the
-              information that can make you or your product create the first
-              impression.
-            </h4>
-            <br />
-            <md-button
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-              class="md-success md-lg"
-              target="_blank"
-              ><i class="fas fa-play"></i> Watch video</md-button
-            >
-          </div>
-        </div>
-      </div>
-    </parallax>
+    <projectHeader>
+      <template v-slot:title>{{ title }}</template>
+      <template v-slot:description>{{ description }}</template>
+    </projectHeader>
     <div class="main main-raised">
       <div class="section">
         <div class="container">
@@ -280,40 +260,79 @@
 </template>
 
 <script>
+import projectHeader from "../customComponents/projectHeader";
 export default {
+  components: {
+    projectHeader,
+  },
   bodyClass: "landing-page",
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/bg7.jpg")
+      default: require("@/assets/img/bg7.jpg"),
     },
     teamImg1: {
       type: String,
-      default: require("@/assets/img/faces/avatar.jpg")
+      default: require("@/assets/img/faces/avatar.jpg"),
     },
     teamImg2: {
       type: String,
-      default: require("@/assets/img/faces/christian.jpg")
+      default: require("@/assets/img/faces/christian.jpg"),
     },
     teamImg3: {
       type: String,
-      default: require("@/assets/img/faces/kendall.jpg")
-    }
+      default: require("@/assets/img/faces/kendall.jpg"),
+    },
   },
+
   data() {
     return {
       name: null,
       email: null,
-      message: null
+      message: null,
+
+      title: "",
+      description: "",
+      furryGame: {
+        title: "Furry Game",
+        description:
+          "Bohaterem naszej gry jest Furry, który porusza się po planszy o rozmiarach 10x10 pól. Na losowym polu planszy znajduje się moneta. Gracz sterując Furrym przy pomocy strzałek na klawiaturze musi dojść do monety. Gdy to zrobi, moneta znika z planszy i pojawia się na innym polu, również losowym, a gracz dostaje 1 punkt. Gdy gracz uderzy w ścianę, gra się kończy: plansza znika i, jak to w grach komputerowych bywa, pojawia się napis GAME OVER. W każdym momencie gry, gracz musi widzieć ile monet już zebrał.",
+      },
+      gameOfLife: {
+        title: "Game Of Life",
+        description: "To wspaniała gra o życiu komórek...",
+      },
     };
+  },
+  watch: {
+    $route(to, from) {
+      this.computeTitle();
+    },
   },
   computed: {
     headerStyle() {
       return {
-        backgroundImage: `url(${this.header})`
+        backgroundImage: `url(${this.header})`,
       };
-    }
-  }
+    },
+  },
+  beforeMount() {
+    this.computeTitle();
+  },
+  methods: {
+    computeTitle() {
+      switch (this.$route.params.project) {
+        case "furryGame":
+          this.title = this.furryGame.title;
+          this.description = this.furryGame.description;
+          break;
+        case "gameOfLife":
+          this.title = this.gameOfLife.title;
+          this.description = this.gameOfLife.description;
+          break;
+      }
+    },
+  },
 };
 </script>
 
