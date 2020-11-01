@@ -11,13 +11,12 @@
             <div
               class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
             >
-              <b-container class="bv-example-row">
-                <b-row>
-                  <b-col>1 of 3</b-col>
-                  <b-col>2 of 3</b-col>
-                  <b-col>3 of 3</b-col>
-                </b-row>
-              </b-container>
+              <furryGame
+                v-if="this.$route.params.project == 'furryGame'"
+              ></furryGame>
+              <gameOfLife
+                v-if="this.$route.params.project == 'gameOfLife'"
+              ></gameOfLife>
             </div>
           </div>
         </div>
@@ -28,9 +27,13 @@
 
 <script>
 import projectHeader from "../customComponents/projectHeader";
+import furryGame from "../customComponents/furryGame";
+import gameOfLife from "../customComponents/gameOfLife";
 export default {
   components: {
     projectHeader,
+    furryGame,
+    gameOfLife,
   },
   bodyClass: "landing-page",
   props: {
