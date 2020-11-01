@@ -22,7 +22,7 @@
     </div>
     <div class="modalBackground" v-if="!isGameStarted"></div>
     <div class="modalWrapper" v-if="!isGameStarted">
-      <div class="modalWindow col-md-6  text-center">
+      <div class="modalWindow col-lg-3  text-center">
         <h2 v-if="!isGameLost">Furry Game</h2>
         <h2 v-else>Przegrana</h2>
         <p v-if="!isGameLost">
