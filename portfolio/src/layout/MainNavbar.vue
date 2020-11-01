@@ -43,7 +43,7 @@
                     <drop-down direction="down">
                       <md-button
                         slot="title"
-                        class="md-button md-button-link md-white md-simple dropdown-toggle"
+                        class="md-button md-button-link md-white md-simple "
                         data-toggle="dropdown"
                       >
                         <i class="material-icons">view_carousel</i>

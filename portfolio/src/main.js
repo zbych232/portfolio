@@ -16,6 +16,14 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 
+import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
+
+Vue.use(BootstrapVue);
+
+Vue.use(IconsPlugin);
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+
 import MaterialKit from "./plugins/material-kit";
 
 Vue.config.productionTip = false;
@@ -23,18 +31,18 @@ Vue.config.productionTip = false;
 Vue.use(MaterialKit);
 
 const NavbarStore = {
-  showNavbar: false
+  showNavbar: false,
 };
 
 Vue.mixin({
   data() {
     return {
-      NavbarStore
+      NavbarStore,
     };
-  }
+  },
 });
 
 new Vue({
   router,
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount("#app");
