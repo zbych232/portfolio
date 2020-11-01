@@ -18,17 +18,28 @@ export default {
   data() {
     return {
       numberOfCells: 144,
+      coinPosition: {
+        x: 0,
+        y: 0,
+      },
+      furryPosition: {
+        x: 0,
+        y: 0,
+      },
     };
   },
   mounted() {
     this.insertFurry();
     this.insertCoin();
+    this.moveFurry();
   },
   methods: {
     insertFurry() {
       $("#board")
-        .find("div")[0]
-        .classList.add("furry");
+        .find("div")
+        [
+          this.divIndex(this.furryPosition.x, this.furryPosition.y)
+        ].classList.add("furry");
     },
     insertCoin() {
       $("#board")
@@ -38,13 +49,21 @@ export default {
         ].classList.add("coin");
     },
     coinPositionX() {
+      this.coinPosition.x = Math.floor(Math.random() * 10);
       return Math.floor(Math.random() * 10);
     },
     coinPositionY() {
+      this.coinPosition.y = Math.floor(Math.random() * 10);
       return Math.floor(Math.random() * 10);
     },
     divIndex(x, y) {
       return x + y * 10;
+    },
+    moveFurry() {
+      this.intervalFun = setInterval(() => {
+        this.furryPosition.x = this.furryPosition.x + 1;
+        this.insertFurry();
+      }, 250);
     },
   },
   computed: {},
