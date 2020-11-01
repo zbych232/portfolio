@@ -4,24 +4,9 @@
       <template v-slot:title>{{ title }}</template>
       <template v-slot:description>{{ description }}</template>
     </projectHeader>
-    <div class="main main-raised">
-      <div class="section">
-        <div class="container">
-          <div class="md-layout">
-            <div
-              class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
-            >
-              <furryGame
-                v-if="this.$route.params.project == 'furryGame'"
-              ></furryGame>
-              <gameOfLife
-                v-if="this.$route.params.project == 'gameOfLife'"
-              ></gameOfLife>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+    <furryGame v-if="this.$route.params.project == 'furryGame'"></furryGame>
+    <gameOfLife v-if="this.$route.params.project == 'gameOfLife'"></gameOfLife>
   </div>
 </template>
 
