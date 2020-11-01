@@ -199,12 +199,13 @@ export default {
 .furry {
   background-image: url("../assets/img/furryGame/furry.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 70%;
+  background-position: center;
 }
 .coin {
   background-image: url("../assets/img/furryGame/coin.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 70%;
+  background-position: center;
 }
 @media screen and (max-width: 768px) {
   .cell {
@@ -213,7 +214,7 @@ export default {
 }
 @media screen and (min-width: 768px) {
   .cell {
-    height: 64px;
+    height: 44px;
   }
 }
 .score {
