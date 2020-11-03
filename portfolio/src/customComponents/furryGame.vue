@@ -20,29 +20,35 @@
         </div>
       </div>
     </div>
-    <div class="modalBackground" v-if="!isGameStarted"></div>
-    <div class="modalWrapper" v-if="!isGameStarted">
-      <div class="modalWindow col-lg-3  text-center">
+
+    <modal v-if="!isGameStarted">
+      <template v-slot:title>
         <h2 v-if="!isGameLost">Furry Game</h2>
-        <h2 v-else>Przegrana</h2>
+        <h2 v-else>Przegrana</h2></template
+      >
+      <template v-slot:content>
         <p v-if="!isGameLost">
           Steruj Furrym za pomocą strzałek.<br />
           Postaraj się zebrać jak najwięcej monet. Powodzenia!
         </p>
 
-        <p v-else>Zebrałeś {{ this.score }} monet!<br />Spróbuj jeszcze raz!</p>
+        <p v-else>Zebrałeś {{ score }} monet!<br />Spróbuj jeszcze raz!</p>
         <md-button class="md-success md-round" @click="startGame()"
           >Rozpocznij grę</md-button
         >
-      </div>
-    </div>
+      </template>
+    </modal>
   </div>
 </template>
 
 <script>
+import modal from "./modalComponent";
 var $ = require("jquery");
 export default {
   name: "furryGame",
+  components: {
+    modal,
+  },
   props: {},
   data() {
     return {
@@ -219,35 +225,5 @@ export default {
 }
 .score {
   color: green;
-}
-.modalBackground {
-  z-index: 9;
-  background-color: black;
-  opacity: 0.8;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.modalWrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .modalWindow {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    z-index: 99;
-  }
 }
 </style>

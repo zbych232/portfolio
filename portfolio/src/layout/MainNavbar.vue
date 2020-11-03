@@ -164,8 +164,8 @@ export default {
   methods: {
     routeFun(name) {
       this.$router.push({
-        name: "landing",
-        params: { project: name },
+        name: name,
+        
       });
     },
     bodyClick() {
