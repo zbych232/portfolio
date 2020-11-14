@@ -6,7 +6,14 @@
           <div
             class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
           >
-            Game of Life
+            <div class="board">
+              <div
+                class="board__cell "
+                v-for="(element, index) in boardSize"
+                :key="index"
+                @click="(e) => addAliveClass(e)"
+              ></div>
+            </div>
           </div>
         </div>
       </div>
@@ -23,9 +30,14 @@ export default {
       default: require("@/assets/img/bg7.jpg"),
     },
   },
+  data: function() {
+    return {
+      boardSize: 2500,
+    };
+  },
   methods: {
-    closeModal: function() {
-      this.$emit("close");
+    addAliveClass(e) {
+      e.target.classList.toggle("aliveClass");
     },
   },
   computed: {
@@ -38,4 +50,22 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &__cell {
+    height: 14px;
+    border: 1px solid black;
+    width: 2%;
+    @media screen and (max-width: 768px) {
+      height: 7px;
+    }
+  }
+}
+.aliveClass {
+  background-color: red;
+}
+</style>
