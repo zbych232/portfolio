@@ -6,9 +6,9 @@
           <div
             class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
           >
-            <div class="row" id="board">
+            <div id="board">
               <div
-                class="cell col-1"
+                class="cell md-layout-item md-size-10"
                 v-for="(element, index) in this.numberOfCells"
                 :key="index"
               ></div>
@@ -52,7 +52,7 @@ export default {
   props: {},
   data() {
     return {
-      numberOfCells: 144,
+      numberOfCells: 100,
       coinPosition: {
         x: 0,
         y: 0,
@@ -113,7 +113,7 @@ export default {
       return this.coinPosition.y;
     },
     divIndex(x, y) {
-      return x + y * 12;
+      return x + y * 10;
     },
     moveFurry() {
       this.intervalFun = setInterval(() => {
@@ -147,9 +147,9 @@ export default {
     },
     checkWallCollision() {
       if (
-        this.furryPosition.x > 11 ||
+        this.furryPosition.x > 9 ||
         this.furryPosition.x < 0 ||
-        this.furryPosition.y > 11 ||
+        this.furryPosition.y > 9 ||
         this.furryPosition.y < 0
       ) {
         clearInterval(this.intervalFun);
@@ -195,6 +195,8 @@ export default {
 <style lang="scss" scoped>
 #board {
   border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
 }
 .cell {
   border: 1px solid black;
@@ -220,7 +222,7 @@ export default {
 }
 @media screen and (min-width: 768px) {
   .cell {
-    height: 44px;
+    height: 64px;
   }
 }
 .score {

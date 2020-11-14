@@ -43,11 +43,9 @@
                     <drop-down direction="down">
                       <md-button
                         slot="title"
-                        class="md-button md-button-link md-white md-simple "
+                        class="md-button md-button-link md-white md-simple dropdown-toggle"
                         data-toggle="dropdown"
                       >
-                        <!--dropdown-toggle było w klasie powyżej. powoduje wyświetlenie strzałki nie działa prawidłowo z bootstrap-->
-
                         <i class="material-icons">view_carousel</i>
                         <p>Projekty</p>
                       </md-button>
@@ -165,7 +163,6 @@ export default {
     routeFun(name) {
       this.$router.push({
         name: name,
-        
       });
     },
     bodyClick() {
