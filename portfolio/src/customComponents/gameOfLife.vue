@@ -141,7 +141,12 @@ export default {
             return 0;
             break;
         }
-      } else {
+      }
+      if (
+        !cellsArray[this.calculateCellIndex(x, y)].classList.contains(
+          "aliveClass"
+        )
+      ) {
         if (numberOfNaighbours === 3) {
           return 1;
         }
@@ -188,7 +193,7 @@ export default {
 
   &__cell {
     height: 14px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.06);
     width: 2%;
     @media screen and (max-width: 768px) {
       height: 7px;
@@ -196,6 +201,6 @@ export default {
   }
 }
 .aliveClass {
-  background-color: black;
+  background-color: #90be6d;
 }
 </style>
