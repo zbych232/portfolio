@@ -125,21 +125,20 @@ export default {
           numberOfNaighbours++;
         }
       }
+
       if (
         cellsArray[this.calculateCellIndex(x, y)].classList.contains(
           "aliveClass"
         )
       ) {
-        switch (numberOfNaighbours) {
-          case numberOfNaighbours < 2:
-            return 0;
-            break;
-          case numberOfNaighbours > 1 && numberOfNaighbours < 4:
-            return 1;
-            break;
-          case numberOfNaighbours >= 4:
-            return 0;
-            break;
+        if (numberOfNaighbours < 2) {
+          return 0;
+        }
+        if (numberOfNaighbours > 1 && numberOfNaighbours < 4) {
+          return 1;
+        }
+        if (numberOfNaighbours >= 4) {
+          return 0;
         }
       }
       if (
@@ -149,6 +148,8 @@ export default {
       ) {
         if (numberOfNaighbours === 3) {
           return 1;
+        } else {
+          return 0;
         }
       }
     },
@@ -160,6 +161,7 @@ export default {
       var intervalll = setInterval(() => {
         this.futureArray = [];
         this.computeNextGeneration();
+
         this.futureArray.forEach((element, index) => {
           if (element === 1) {
             cellsArray[index].classList.add("aliveClass");
@@ -169,7 +171,7 @@ export default {
           }
         });
 
-        if (this.futureArray.every((e) => e === undefined)) {
+        if (this.futureArray.every((e) => e === 0)) {
           clearInterval(intervalll);
         }
       }, 250);
