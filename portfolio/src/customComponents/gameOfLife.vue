@@ -14,7 +14,8 @@
                 @click="(e) => addAliveClass(e)"
               ></div>
             </div>
-            <button @click="startFun()">Start</button>
+            <button @click="startFun()" v-if="!toggleStart">Start</button>
+            <button @click="stopFun()" v-if="toggleStart">Stop</button>
           </div>
         </div>
       </div>
@@ -37,6 +38,7 @@ export default {
     return {
       boardSize: 2500,
       futureArray: [],
+      toggleStart: false,
     };
   },
   methods: {
@@ -157,8 +159,10 @@ export default {
       return x + y * 50;
     },
     startFun() {
+      this.toggleStart = this.toggleStart ? false : true;
       let cellsArray = document.getElementsByClassName("board__cell");
-      var intervalll = setInterval(() => {
+
+      this.intervalll = setInterval(() => {
         this.futureArray = [];
         this.computeNextGeneration();
 
@@ -172,9 +176,14 @@ export default {
         });
 
         if (this.futureArray.every((e) => e === 0)) {
-          clearInterval(intervalll);
+          clearInterval(this.intervalll);
+          this.toggleStart = this.toggleStart ? false : true;
         }
       }, 250);
+    },
+    stopFun() {
+      this.toggleStart = this.toggleStart ? false : true;
+      clearInterval(this.intervalll);
     },
   },
   computed: {
