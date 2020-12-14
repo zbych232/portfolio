@@ -5,7 +5,7 @@
   border-radius: 3px;
   margin-bottom: 20px;
 
-  &.md-transparent{
+  &.md-transparent {
     background-color: transparent !important;
     box-shadow: none;
     padding-top: 25px;
@@ -15,8 +15,9 @@
     .md-list-item-container .md-icon,
     &,
     &:hover,
-    &:focus{
-      color: $white-color !important;
+    &:focus {
+      //color: $white-color !important;
+      color: #555 !important;
     }
   }
 
@@ -46,14 +47,14 @@
     }
   }
 
-  .notification{
+  .notification {
     position: absolute;
     top: 5px;
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     right: 10px;
     font-size: 9px;
     background: #f44336;
-    color: #FFFFFF;
+    color: #ffffff;
     min-width: 20px;
     padding: 0px 5px;
     height: 20px;
@@ -65,12 +66,12 @@
   }
 
   .navbar-nav {
-    > li > .dropdown-menu{
-        margin-top: -20px;
+    > li > .dropdown-menu {
+      margin-top: -20px;
     }
 
-    > li.open > .dropdown-menu{
-        margin-top: 0;
+    > li.open > .dropdown-menu {
+      margin-top: 0;
     }
 
     > .active > a {
@@ -90,15 +91,14 @@
         opacity: 0.9;
       }
     }
-    .profile-photo{
-        padding: 0 5px 0;
-        .profile-photo-small{
-            height: 40px;
-            width: 40px;
-        }
+    .profile-photo {
+      padding: 0 5px 0;
+      .profile-photo-small {
+        height: 40px;
+        width: 40px;
+      }
     }
   }
-
 
   // default color for dropdown
   @include dropdown-colors($brand-success);
@@ -106,7 +106,9 @@
 
   &.md-white {
     @include toolbar-colors($white-color, $navbar-color);
-
+    //custom modification
+    opacity: 0.98;
+    //
     .md-list-item .md-button.md-simple {
       &,
       &:hover,
@@ -128,43 +130,43 @@
     }
   }
 
-  &.md-primary{
+  &.md-primary {
     @include dropdown-colors($brand-primary);
     @include toolbar-colors($brand-primary, $white-color);
   }
-  &.md-danger{
+  &.md-danger {
     @include dropdown-colors($brand-danger);
     @include toolbar-colors($brand-danger, $white-color);
   }
-  &.md-warning{
+  &.md-warning {
     @include dropdown-colors($brand-warning);
     @include toolbar-colors($brand-warning, $white-color);
   }
-  &.md-info{
+  &.md-info {
     @include dropdown-colors($brand-info);
     @include toolbar-colors($brand-info, $white-color);
   }
-  &.md-success{
+  &.md-success {
     @include dropdown-colors($brand-success);
     @include toolbar-colors($brand-success, $white-color);
   }
-  &.md-rose{
+  &.md-rose {
     @include dropdown-colors($brand-rose);
     @include toolbar-colors($brand-rose, $white-color);
   }
-  &.md-dark{
+  &.md-dark {
     @include dropdown-colors($grey-900);
     @include toolbar-colors($grey-900, $white-color);
   }
 
-  &.navbar-transparent{
-      background-color: transparent;
-      box-shadow: none;
-      border-bottom: 0;
+  &.navbar-transparent {
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 0;
 
-      .logo-container .brand{
-          color: $white-color;
-      }
+    .logo-container .brand {
+      color: $white-color;
+    }
   }
 
   .md-toolbar-row {
@@ -173,7 +175,7 @@
     padding-right: 15px;
   }
 
-  .md-button{
+  .md-button {
     margin: 0;
   }
 
@@ -194,19 +196,19 @@
     width: unset;
   }
 
-  .md-toolbar-toggle .md-button-content{
+  .md-toolbar-toggle .md-button-content {
     display: block;
     align-items: unset;
   }
 
-  .notification{
+  .notification {
     position: absolute;
     top: 0px;
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     right: 7px;
     font-size: 9px;
     background: #f44336;
-    color: #FFFFFF;
+    color: #ffffff;
     min-width: 20px;
     padding: 0px 5px;
     height: 20px;
@@ -249,13 +251,13 @@
       border: 1px solid;
       border-radius: 1px;
 
-      & + .icon-bar{
+      & + .icon-bar {
         margin-top: 4px;
       }
     }
   }
 
-  .md-list{
+  .md-list {
     flex-flow: row;
     padding-top: 0;
     padding-bottom: 0;
@@ -268,56 +270,56 @@
       background-color: transparent !important;
     }
 
-    .md-list-item > a:not(:last-child){
+    .md-list-item > a:not(:last-child) {
       margin-right: 5px;
     }
   }
 
-  .md-field{
+  .md-field {
     padding: 0;
     margin: 0;
 
     &:after,
-    &:before{
+    &:before {
       bottom: 5px;
     }
 
-    .md-input{
+    .md-input {
       margin-top: 6px;
     }
 
-    label{
+    label {
       top: 15px;
     }
 
     &.md-focused label,
-    &.md-has-value label{
+    &.md-has-value label {
       top: -4px;
     }
   }
 
-  .md-collapse{
+  .md-collapse {
     display: flex;
     width: 100%;
     justify-content: flex-end;
   }
 }
 
-.md-menu-content{
+.md-menu-content {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   border-radius: $border-radius-base !important;
   overflow: hidden;
 
-  .md-list .md-list-item a{
+  .md-list .md-list-item a {
     font-size: 10px;
   }
 }
 
-.md-list-item{
+.md-list-item {
   list-style: none;
 
-  .router-link-active .md-ripple{
-    background-color: rgba(255,255,255,.1);
+  .router-link-active .md-ripple {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   a {
@@ -346,7 +348,7 @@
     .material-icons,
     .md-icon,
     .fab,
-    .fa{
+    .fa {
       font-size: 20px !important;
       margin: 0 !important;
       width: 24px;
@@ -359,7 +361,7 @@
       margin-left: 5px !important;
     }
 
-    .md-ripple{
+    .md-ripple {
       padding: 10px 15px;
       border-radius: $border-radius-base;
 
@@ -374,7 +376,7 @@
         color: inherit !important;
       }
 
-      > span{
+      > span {
         border-radius: $border-radius-base;
       }
     }
@@ -385,10 +387,11 @@
   }
 
   & .md-list-item-container .md-just-icon .md-ripple .md-icon {
-    margin: 0
+    margin: 0;
   }
 
-  .md-button.md-button-link:not(.md-just-icon):not(.md-btn-fab):not(.md-icon-button):not(.md-toolbar-toggle) .md-ripple{
+  .md-button.md-button-link:not(.md-just-icon):not(.md-btn-fab):not(.md-icon-button):not(.md-toolbar-toggle)
+    .md-ripple {
     padding: 12px 15px;
     min-height: 48px;
 

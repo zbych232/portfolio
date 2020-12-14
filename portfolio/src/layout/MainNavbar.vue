@@ -33,8 +33,14 @@
                   <p>O mnie</p>
                 </md-list-item>
               </router-link>
+              <router-link :to="{ name: 'furryGame' }">
+                <md-list-item href="javascript:void(0)">
+                  <i class="material-icons">fingerprint</i>
+                  <p>Projekty</p>
+                </md-list-item>
+              </router-link>
 
-              <li class="md-list-item">
+              <!-- <li class="md-list-item">
                 <a
                   href="javascript:void(0)"
                   class="md-list-item-router md-list-item-container md-button-clean dropdown"
@@ -67,7 +73,7 @@
                     </drop-down>
                   </div>
                 </a>
-              </li>
+              </li> -->
 
               <md-list-item
                 href="https://twitter.com/CreativeTim"
@@ -190,7 +196,8 @@ export default {
         document.body.scrollTop || document.documentElement.scrollTop;
       let navbarColor = document.getElementById("toolbar");
       this.currentScrollValue = scrollValue;
-      if (this.colorOnScroll > 0 && scrollValue > this.colorOnScroll) {
+      if (scrollValue > 0) {
+        //if (this.colorOnScroll > 0 && scrollValue > this.colorOnScroll) {
         this.extraNavClasses = `md-${this.type}`;
         navbarColor.classList.remove("md-transparent");
       } else {

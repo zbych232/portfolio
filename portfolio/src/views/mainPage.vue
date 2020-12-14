@@ -1,0 +1,50 @@
+<template>
+  <div class="wrapper">
+    <div class="section">
+      <div class="container">
+        <div class="headerContainer">
+          <h1>Hi there!</h1>
+          <h1>I'm Zbigniew</h1>
+          <h2>Frontend Developer</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  components: {},
+
+  data() {
+    return {};
+  },
+  props: {},
+  computed: {},
+};
+</script>
+
+<style lang="scss" scoped>
+.headerContainer {
+  margin-left: auto;
+  text-align: right;
+  margin-top: 100px;
+  height: 100vh;
+  h1 {
+    font-weight: 900;
+    font-size: 4em;
+    color: black;
+    @media only screen and (min-width: 600px) {
+      font-size: 7em;
+    }
+  }
+  h2 {
+    font-weight: 900;
+    font-size: 2em;
+    color: black;
+    @media only screen and (min-width: 600px) {
+      font-size: 4em;
+    }
+  }
+}
+</style>

@@ -6,6 +6,7 @@ import FurryGame from "./views/FurryGamePage.vue";
 import GameOfLife from "./views/GameOfLifePage.vue";
 import MainNavbar from "./layout/MainNavbar.vue";
 import MainFooter from "./layout/MainFooter.vue";
+import mainPage from "./views/mainPage.vue"
 
 Vue.use(Router);
 
@@ -14,7 +15,7 @@ export default new Router({
     {
       path: "/",
       name: "index",
-      components: { default: Profile, header: MainNavbar, footer: MainFooter },
+      components: { default: mainPage, header: MainNavbar, footer: MainFooter },
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: "black" },
