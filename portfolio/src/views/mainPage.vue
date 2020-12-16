@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="section">
+      <div class="fancyShape"></div>
       <div class="container">
         <div class="headerContainer">
           <h1>Hi there!</h1>
@@ -45,6 +46,26 @@ export default {
     @media only screen and (min-width: 600px) {
       font-size: 4em;
     }
+  }
+}
+.fancyShape {
+  position: absolute;
+  top: calc(50vh - 200px);
+  left: calc(50vw - 200px);
+  width: 400px;
+  height: 400px;
+  background-color: #1870f2;
+  border-radius: 58% 42% 36% 64% / 60% 64% 36% 40%;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes example {
+  0% {
+  }
+  100% {
+    border-radius: 58% 42% 51% 49% / 51% 52% 48% 49%;
   }
 }
 </style>
