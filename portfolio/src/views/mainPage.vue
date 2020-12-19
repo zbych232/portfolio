@@ -49,7 +49,9 @@
                 join your team, and I'm willing to work efficiently and
                 thoroughly with your in-house team.
               </p>
-              <md-button class="md-warning md-round md-lg">Download CV</md-button>
+              <md-button class="md-warning md-round md-lg"
+                >Download CV</md-button
+              >
             </div>
           </div>
         </div>
@@ -62,6 +64,75 @@
         ></path>
       </svg>
     </div>
+    <div class="section myProjectsSection">
+      <div class="container">
+        <div class="myProjectsSection__title text-center">
+          <h2>My recent projects</h2>
+          <h3>Here are a few design projects I've worked on recently.</h3>
+        </div>
+        <div class="md-layout">
+          <div class="md-size-50  md-xsmall-size-100 md-layout-item">
+            <div class="myProjectsSection">
+              <div class="myProjectsSection__projectItemWrapper text-center">
+                <div
+                  class="myProjectsSection__projectItemWrapper__projectItem text-center"
+                >
+                  <img :src="projectImage" alt="Rounded Image" />
+                  <div
+                    class="myProjectsSection__projectItemWrapper__projectItem__textSection"
+                  >
+                    <h3>Ml Trans</h3>
+                    <div class="dotsSpacing">
+                      <div
+                        class="dotsSpacing__dot"
+                        v-for="(element, index) in dots"
+                        :key="index"
+                      ></div>
+                    </div>
+                    <h4>High quality transport and logistic services</h4>
+                    <p>
+                      This project required me to put in all my experience as a
+                      full-stack developer to create a design and set themes for
+                      the website. It also required a smooth design that could
+                      work on different browsers, and I successfully achieved
+                      the goal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="myProjectsSection__projectItemWrapper text-center">
+                <div
+                  class="myProjectsSection__projectItemWrapper__projectItem text-center"
+                >
+                  <img :src="projectImage" alt="Rounded Image" />
+                  <div
+                    class="myProjectsSection__projectItemWrapper__projectItem__textSection"
+                  >
+                    <h3>Ml Trans</h3>
+                    <div class="dotsSpacing">
+                      <div
+                        class="dotsSpacing__dot"
+                        v-for="(element, index) in dots"
+                        :key="index"
+                      ></div>
+                    </div>
+                    <h4>High quality transport and logistic services</h4>
+                    <p>
+                      This project required me to put in all my experience as a
+                      full-stack developer to create a design and set themes for
+                      the website. It also required a smooth design that could
+                      work on different browsers, and I successfully achieved
+                      the goal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md-size-50  md-xsmall-size-100 md-layout-item"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -72,7 +143,11 @@ export default {
   data() {
     return {
       image: require("@/assets/img/faces/zbyszeknew.jpg"),
+      projectImage: require("@/assets/img/nature-2.jpg"),
+      projectImage2: require("@/assets/img/bg2.jpg"),
+      projectImage3: require("@/assets/img/city.jpg"),
       responsive: false,
+      dots: 9,
     };
   },
   props: {},
@@ -125,12 +200,12 @@ export default {
   height: 100px;
   background-color: #5000ca;
   border-radius: 58% 42% 36% 64% / 60% 64% 36% 40%;
-  animation-name: example;
+  animation-name: fancyShape;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-@keyframes example {
+@keyframes fancyShape {
   0% {
   }
   100% {
@@ -149,11 +224,86 @@ export default {
   &__textSection {
     h2 {
       margin-top: 0;
-      font-weight: 900;
+      font-weight: 400;
     }
     p {
       font-size: 1.2em;
       font-weight: 400;
+    }
+  }
+}
+.myProjectsSection {
+  &__title {
+    h2 {
+      color: black;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    h3 {
+      font-weight: 400;
+    }
+  }
+  &__projectItemWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 20px 0px;
+    &__projectItem {
+      width: 96%;
+      transition: width 0.3s;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.12);
+
+      img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+      }
+      &__textSection {
+        padding: 40px;
+
+        h3 {
+          color: black;
+          text-transform: uppercase;
+          font-weight: 400;
+          margin-bottom: 0;
+        }
+        h4 {
+          font-style: italic;
+          color: black;
+        }
+        p {
+          color: black;
+          word-break: keep-all;
+        }
+      }
+      .dotsSpacing {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        &__dot {
+          width: 4px;
+          height: 4px;
+          background-color: #5000ca;
+          border-radius: 50%;
+          margin: 0 2px;
+        }
+      }
+    }
+    &__projectItem:hover {
+      // animation-name: shadowAndResize;
+      // animation-duration: 0.1s;
+      // animation-fill-mode: forwards;
+      width: 100%;
+    }
+    @keyframes shadowAndResize {
+      0% {
+      }
+      100% {
+        width: 100%;
+      }
     }
   }
 }
