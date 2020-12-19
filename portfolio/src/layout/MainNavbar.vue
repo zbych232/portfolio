@@ -27,7 +27,7 @@
               <!-- Here you can add your items from the section-start of your toolbar -->
             </mobile-menu>
             <md-list>
-              <router-link :to="{ name: 'index' }">
+              <router-link :to="{ name: 'mainPage' }">
                 <md-list-item href="javascript:void(0)">
                   <i class="material-icons">content_paste</i>
                   <p>O mnie</p>

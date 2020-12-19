@@ -49,7 +49,7 @@
                 join your team, and I'm willing to work efficiently and
                 thoroughly with your in-house team.
               </p>
-              <md-button class="md-success md-round">Download CV</md-button>
+              <md-button class="md-warning md-round md-lg">Download CV</md-button>
             </div>
           </div>
         </div>
@@ -98,7 +98,6 @@ export default {
 
 <style lang="scss" scoped>
 .headerContainer {
-  margin-left: auto;
   text-align: right;
   margin-top: 100px;
   h1 {
@@ -153,7 +152,7 @@ export default {
       font-weight: 900;
     }
     p {
-      font-size: 1em;
+      font-size: 1.2em;
       font-weight: 400;
     }
   }
