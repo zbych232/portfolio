@@ -76,6 +76,8 @@
               <div class="myProjectsSection__projectItemWrapper text-center">
                 <div
                   class="myProjectsSection__projectItemWrapper__projectItem text-center"
+                  @mouseover="mouseoverOnProjestItem"
+                  @mouseleave="mouseleaveOnProjestItem"
                 >
                   <img :src="projectImage" alt="Rounded Image" />
                   <div
@@ -90,7 +92,7 @@
                       ></div>
                     </div>
                     <h4>High quality transport and logistic services</h4>
-                    <p>
+                    <p id="mouse">
                       This project required me to put in all my experience as a
                       full-stack developer to create a design and set themes for
                       the website. It also required a smooth design that could
@@ -166,6 +168,12 @@ export default {
       } else {
         this.responsive = false;
       }
+    },
+    mouseoverOnProjestItem() {
+      document.getElementById("mouse").style.fontSize = (16*5)/100 + 16 +"px"
+    },
+    mouseleaveOnProjestItem() {
+      document.getElementById("mouse").style.fontSize = "16px";
     },
   },
 };
@@ -251,7 +259,7 @@ export default {
     margin: 20px 0px;
     &__projectItem {
       width: 96%;
-      transition: width 0.3s;
+      transition: width 0s;
       cursor: pointer;
       border-radius: 10px;
       box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.12);
@@ -262,7 +270,8 @@ export default {
       }
       &__textSection {
         padding: 40px;
-
+        margin-left: auto;
+        margin-right: auto;
         h3 {
           color: black;
           text-transform: uppercase;
@@ -276,6 +285,7 @@ export default {
         p {
           color: black;
           word-break: keep-all;
+          font-size: 16px;
         }
       }
       .dotsSpacing {
@@ -293,17 +303,7 @@ export default {
       }
     }
     &__projectItem:hover {
-      // animation-name: shadowAndResize;
-      // animation-duration: 0.1s;
-      // animation-fill-mode: forwards;
       width: 100%;
-    }
-    @keyframes shadowAndResize {
-      0% {
-      }
-      100% {
-        width: 100%;
-      }
     }
   }
 }
