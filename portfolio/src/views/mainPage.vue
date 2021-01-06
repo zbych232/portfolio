@@ -76,8 +76,6 @@
               <div class="myProjectsSection__projectItemWrapper text-center">
                 <div
                   class="myProjectsSection__projectItemWrapper__projectItem text-center"
-                  @mouseover="mouseoverOnProjestItem"
-                  @mouseleave="mouseleaveOnProjestItem"
                 >
                   <img :src="projectImage" alt="Rounded Image" />
                   <div
@@ -92,7 +90,7 @@
                       ></div>
                     </div>
                     <h4>High quality transport and logistic services</h4>
-                    <p id="mouse">
+                    <p>
                       This project required me to put in all my experience as a
                       full-stack developer to create a design and set themes for
                       the website. It also required a smooth design that could
@@ -131,7 +129,63 @@
               </div>
             </div>
           </div>
-          <div class="md-size-50  md-xsmall-size-100 md-layout-item"></div>
+          <div class="md-size-50  md-xsmall-size-100 md-layout-item">
+            <div class="myProjectsSection">
+              <div class="myProjectsSection__projectItemWrapper text-center">
+                <div
+                  class="myProjectsSection__projectItemWrapper__projectItem text-center"
+                >
+                  <div
+                    class="myProjectsSection__projectItemWrapper__projectItem__textSection"
+                  >
+                    <h3>Ml Trans</h3>
+                    <div class="dotsSpacing">
+                      <div
+                        class="dotsSpacing__dot"
+                        v-for="(element, index) in dots"
+                        :key="index"
+                      ></div>
+                    </div>
+                    <h4>High quality transport and logistic services</h4>
+                    <p>
+                      This project required me to put in all my experience as a
+                      full-stack developer to create a design and set themes for
+                      the website. It also required a smooth design that could
+                      work on different browsers, and I successfully achieved
+                      the goal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="myProjectsSection__projectItemWrapper text-center">
+                <div
+                  class="myProjectsSection__projectItemWrapper__projectItem text-center"
+                >
+                  <img :src="projectImage" alt="Rounded Image" />
+                  <div
+                    class="myProjectsSection__projectItemWrapper__projectItem__textSection"
+                  >
+                    <h3>Ml Trans</h3>
+                    <div class="dotsSpacing">
+                      <div
+                        class="dotsSpacing__dot"
+                        v-for="(element, index) in dots"
+                        :key="index"
+                      ></div>
+                    </div>
+                    <h4>High quality transport and logistic services</h4>
+                    <p>
+                      This project required me to put in all my experience as a
+                      full-stack developer to create a design and set themes for
+                      the website. It also required a smooth design that could
+                      work on different browsers, and I successfully achieved
+                      the goal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -170,7 +224,8 @@ export default {
       }
     },
     mouseoverOnProjestItem() {
-      document.getElementById("mouse").style.fontSize = (16*5)/100 + 16 +"px"
+      document.getElementById("mouse").style.fontSize =
+        (16 * 5) / 100 + 16 + "px";
     },
     mouseleaveOnProjestItem() {
       document.getElementById("mouse").style.fontSize = "16px";
@@ -255,15 +310,16 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 40px 0px;
 
-    margin: 20px 0px;
     &__projectItem {
-      width: 96%;
       transition: width 0s;
       cursor: pointer;
       border-radius: 10px;
       box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.12);
-
+      transition: margin 0.3s;
+      width: 100%;
+      margin: 10px;
       img {
         width: 100%;
         border-radius: 10px 10px 0 0;
@@ -272,6 +328,9 @@ export default {
         padding: 40px;
         margin-left: auto;
         margin-right: auto;
+
+        width: 320px;
+
         h3 {
           color: black;
           text-transform: uppercase;
@@ -293,6 +352,7 @@ export default {
         align-items: center;
         justify-content: center;
         margin-bottom: 20px;
+
         &__dot {
           width: 4px;
           height: 4px;
@@ -303,7 +363,8 @@ export default {
       }
     }
     &__projectItem:hover {
-      width: 100%;
+      margin: 0;
+      box-shadow: 0 3px 40px 0 rgba(0, 0, 0, 0.12);
     }
   }
 }
