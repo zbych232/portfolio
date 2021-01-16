@@ -156,6 +156,136 @@
         </div>
       </div>
     </div>
+    <div class="section myProjectsSection">
+      <div class="container">
+        <div class="myProjectsSection__title text-center">
+          <h2>Skills & Tools</h2>
+          <h3>For those who know what they’re looking for...</h3>
+        </div>
+        <div class="brandsContainer">
+          <div class="brandsContainer__item">
+            <div class="brandsContainer__item__imgWrapper">
+              <div class="text-center">
+                <img :src="brandImageHtml" />
+              </div>
+            </div>
+            <div class="brandsContainer__item__titleWrapper">
+              <div>
+                <p>HTML5</p>
+              </div>
+            </div>
+          </div>
+          <div class="brandsContainer__item">
+            <div class="brandsContainer__item__imgWrapper">
+              <div class="text-center">
+                <img :src="brandImageCss" />
+              </div>
+            </div>
+            <div class="brandsContainer__item__titleWrapper">
+              <div>
+                <p>CSS3</p>
+              </div>
+            </div>
+          </div>
+          <div class="brandsContainer__item">
+            <div class="brandsContainer__item__imgWrapper">
+              <div class="text-center">
+                <img :src="brandImageJs" />
+              </div>
+            </div>
+            <div class="brandsContainer__item__titleWrapper">
+              <div>
+                <p>JavaScript</p>
+              </div>
+            </div>
+          </div>
+          <div class="brandsContainer__item">
+            <div class="brandsContainer__item__imgWrapper">
+              <div class="text-center">
+                <img :src="brandImageVue" />
+              </div>
+            </div>
+            <div class="brandsContainer__item__titleWrapper">
+              <div>
+                <p>Vue</p>
+              </div>
+            </div>
+          </div>
+          <div class="brandsContainer__item">
+            <div class="brandsContainer__item__imgWrapper">
+              <div class="text-center">
+                <img :src="brandImageJquerry" />
+              </div>
+            </div>
+            <div class="brandsContainer__item__titleWrapper">
+              <div>
+                <p>jQuerry</p>
+              </div>
+            </div>
+          </div>
+          <div class="brandsContainer__item">
+            <div class="brandsContainer__item__imgWrapper">
+              <div class="text-center">
+                <img :src="brandImageSass" />
+              </div>
+            </div>
+            <div class="brandsContainer__item__titleWrapper">
+              <div>
+                <p>Sass</p>
+              </div>
+            </div>
+          </div>
+          <div class="brandsContainer__item">
+            <div class="brandsContainer__item__imgWrapper">
+              <div class="text-center">
+                <img :src="brandImageBootstrap" />
+              </div>
+            </div>
+            <div class="brandsContainer__item__titleWrapper">
+              <div>
+                <p>Bootstrap</p>
+              </div>
+            </div>
+          </div>
+          <div class="brandsContainer__item">
+            <div class="brandsContainer__item__imgWrapper">
+              <div class="text-center">
+                <img :src="brandImageGit" />
+              </div>
+            </div>
+            <div class="brandsContainer__item__titleWrapper">
+              <div>
+                <p>git</p>
+              </div>
+            </div>
+          </div>
+          <div class="brandsContainer__item">
+            <div class="brandsContainer__item__imgWrapper">
+              <div class="text-center">
+                <img :src="brandImageWordpress" />
+              </div>
+            </div>
+            <div class="brandsContainer__item__titleWrapper">
+              <div>
+                <p>Wordpress</p>
+              </div>
+            </div>
+          </div>
+          <div class="brandsContainer__item">
+            <div class="brandsContainer__item__imgWrapper">
+              <div class="text-center">
+                <img :src="brandImageNpm" />
+              </div>
+            </div>
+            <div class="brandsContainer__item__titleWrapper">
+              <div>
+                <p>npm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -166,6 +296,16 @@ export default {
   data() {
     return {
       image: require("@/assets/img/faces/zbyszeknew.jpg"),
+      brandImageHtml: require("@/assets/img/brands/html.png"),
+      brandImageCss: require("@/assets/img/brands/css.png"),
+      brandImageJs: require("@/assets/img/brands/js.png"),
+      brandImageVue: require("@/assets/img/brands/vue.png"),
+      brandImageJquerry: require("@/assets/img/brands/jquerry.png"),
+      brandImageSass: require("@/assets/img/brands/sass.png"),
+      brandImageBootstrap: require("@/assets/img/brands/bootstrap.png"),
+      brandImageGit: require("@/assets/img/brands/git.png"),
+      brandImageWordpress: require("@/assets/img/brands/wordpress.png"),
+      brandImageNpm: require("@/assets/img/brands/npm.png"),
       projectImage: require("@/assets/img/nature-2.jpg"),
       projectImage2: require("@/assets/img/bg2.jpg"),
       projectImage3: require("@/assets/img/city.jpg"),
@@ -342,6 +482,44 @@ export default {
   &__projectItem:hover {
     margin: 30px 0;
     box-shadow: 0 3px 40px 0 rgba(0, 0, 0, 0.12);
+  }
+}
+.brandsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  &__item {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    border: 1px solid #dadada;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    &__imgWrapper {
+      height: 70%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 60%;
+      }
+    }
+    &__titleWrapper {
+      height: 30%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        margin: 0;
+        font-weight: 800;
+      }
+    }
   }
 }
 </style>
