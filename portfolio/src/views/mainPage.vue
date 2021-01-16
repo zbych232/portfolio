@@ -300,13 +300,14 @@ export default {
       }
       @media only screen and (min-width: 992px) {
         width: 420px;
+        padding: 40px;
       }
 
       h3 {
         color: black;
         text-transform: uppercase;
         font-weight: 400;
-        margin-bottom: 0;
+        margin: 0;
       }
       h4 {
         font-style: italic;
@@ -316,6 +317,7 @@ export default {
         color: black;
         word-break: keep-all;
         font-size: 16px;
+        margin: 0;
       }
     }
     .dotsSpacing {
