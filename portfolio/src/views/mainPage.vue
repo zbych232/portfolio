@@ -228,6 +228,10 @@ export default {
   left: calc(20vw);
   width: 100px;
   height: 100px;
+  @media only screen and (min-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
   background-color: #5000ca;
   border-radius: 58% 42% 36% 64% / 60% 64% 36% 40%;
   animation-name: fancyShape;
