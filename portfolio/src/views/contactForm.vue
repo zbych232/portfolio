@@ -204,6 +204,8 @@ export default {
       animation-name: blinkingDot;
       animation-duration: 2s;
       animation-iteration-count: infinite;
+      box-sizing: border-box;
+      flex-shrink: 0;
       &__dot {
         width: 100%;
         height: 100%;
