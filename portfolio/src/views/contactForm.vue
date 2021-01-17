@@ -78,6 +78,10 @@
           >Send a message</md-button
         >
       </form>
+      <span v-if="formSendSuccesfully">Wysłano pomyślnie wiadomość</span>
+      <span v-if="formSendSuccesfully == false"
+        >Błąd serwera. Nie wysłano wiadomości.</span
+      >
     </div>
   </div>
 </template>
@@ -89,9 +93,7 @@ export default {
 
   data() {
     return {
-      success: true,
-      error: true,
-      withMIcon: true,
+      formSendSuccesfully: null,
       name: {
         id: "contactFormNameInput",
         value: "",
@@ -171,13 +173,11 @@ export default {
             },
             cache: false,
           })
-          .then(function(response) {
-            // handle success
-            console.log(response);
+          .then(() => {
+            this.formSendSuccesfully = true;
           })
-          .catch(function(error) {
-            // handle error
-            console.log(error);
+          .catch(() => {
+            this.formSendSuccesfully = false;
           });
       }
     },
