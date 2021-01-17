@@ -286,12 +286,40 @@
         </div>
       </div>
     </div>
+    <div class="section ">
+      <div class="container">
+        <div class="md-layout">
+          <div class="md-size-50  md-xsmall-size-100 md-layout-item">
+            <div class="getInTouchText">
+              <h2>Get in Touch</h2>
+              <p>
+                If you’re ever interested in learning about my work and my
+                working process with clients, please feel free to contact me
+                with information about the projects. We can set up a call or a
+                meet to discuss how I can utilize my skills in achieving the
+                success of your project.
+              </p>
+              <p>
+                You can find me in a few places on the web, but if if you prefer
+                to do it the "old way" then just write to me message.
+              </p>
+            </div>
+          </div>
+          <div class="md-size-50  md-xsmall-size-100 md-layout-item">
+            <contactForm></contactForm>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import contactForm from "./contactForm"
 export default {
-  components: {},
+  components: {
+    contactForm
+  },
 
   data() {
     return {
@@ -329,13 +357,6 @@ export default {
       } else {
         this.responsive = false;
       }
-    },
-    mouseoverOnProjestItem() {
-      document.getElementById("mouse").style.fontSize =
-        (16 * 5) / 100 + 16 + "px";
-    },
-    mouseleaveOnProjestItem() {
-      document.getElementById("mouse").style.fontSize = "16px";
     },
   },
 };
@@ -520,6 +541,16 @@ export default {
         font-weight: 800;
       }
     }
+  }
+}
+.getInTouchText {
+  h2 {
+    font-weight: 400;
+    color: black;
+  }
+  p {
+    font-size: 1.2em;
+    font-weight: 400;
   }
 }
 </style>
