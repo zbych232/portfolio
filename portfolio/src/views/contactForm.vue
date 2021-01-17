@@ -189,6 +189,9 @@ export default {
   &__iAmAvaliable {
     display: flex;
     align-items: center;
+    @media only screen and (max-width: 600px) {
+      margin-top: 40px;
+    }
 
     p {
       font-size: 1.2em;
@@ -243,7 +246,7 @@ export default {
     }
   }
   &__form {
-    margin-top: 60px;
+    margin-top: 40px;
     textarea {
       resize: none;
       width: 100%;
