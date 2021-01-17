@@ -315,10 +315,10 @@
 </template>
 
 <script>
-import contactForm from "./contactForm"
+import contactForm from "./contactForm";
 export default {
   components: {
-    contactForm
+    contactForm,
   },
 
   data() {
@@ -455,9 +455,10 @@ export default {
       margin-left: auto;
       margin-right: auto;
       width: 320px;
-      padding: 40px;
+      padding: 20px 0;
       @media only screen and (max-width: 400px) {
-        width: 100%;
+        width: 200px;
+        padding: 20px 0;
       }
       @media only screen and (min-width: 600px) {
         width: 200px;
@@ -465,6 +466,10 @@ export default {
       }
       @media only screen and (min-width: 992px) {
         width: 420px;
+        padding: 40px;
+      }
+      @media only screen and (min-width: 1200px) {
+        width: 500px;
         padding: 40px;
       }
 
