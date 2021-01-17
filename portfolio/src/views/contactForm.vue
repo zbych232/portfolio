@@ -83,6 +83,7 @@
 </template>
 
 <script>
+const axios = require("axios").default;
 export default {
   components: {},
 
@@ -158,7 +159,26 @@ export default {
       this.emailValidation();
       this.messageValidation();
       if (this.name.isValid && this.email.isValid && this.message.isValid) {
-        alert("Message Sent!");
+        axios
+          .get({
+            url: "./contact_me.php",
+            type: "POST",
+            data: {
+              name: this.name.value,
+              phone: 0,
+              email: this.email.value,
+              message: this.message.value,
+            },
+            cache: false,
+          })
+          .then(function(response) {
+            // handle success
+            console.log(response);
+          })
+          .catch(function(error) {
+            // handle error
+            console.log(error);
+          });
       }
     },
   },
