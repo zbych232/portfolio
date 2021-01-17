@@ -12,6 +12,7 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run dev"
   },
   "dependencies": {
+    "ajax": "0.0.4",
     "axios": "^0.21.1",
     "core-js": "3.5.0",
     "jquery": "^3.5.1",

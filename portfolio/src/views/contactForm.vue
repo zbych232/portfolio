@@ -88,6 +88,8 @@
 
 <script>
 const axios = require("axios").default;
+
+var $ = require("jquery");
 export default {
   components: {},
 
@@ -161,7 +163,7 @@ export default {
       this.emailValidation();
       this.messageValidation();
       if (this.name.isValid && this.email.isValid && this.message.isValid) {
-        axios({
+        $.ajax({
           method: "post",
           url: "./js/contact_me.php",
           data: {
