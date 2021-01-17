@@ -164,7 +164,7 @@ export default {
       this.messageValidation();
       if (this.name.isValid && this.email.isValid && this.message.isValid) {
         $.ajax({
-          method: "post",
+          type: "POST",
           url: "./js/contact_me.php",
           data: {
             name: this.name.value,
