@@ -166,7 +166,6 @@ export default {
           url: "./js/contact_me.php",
           data: {
             name: this.name.value,
-            phone: 0,
             email: this.email.value,
             message: this.message.value,
           },
