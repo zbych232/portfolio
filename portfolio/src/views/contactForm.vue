@@ -161,18 +161,17 @@ export default {
       this.emailValidation();
       this.messageValidation();
       if (this.name.isValid && this.email.isValid && this.message.isValid) {
-        axios
-          .get({
-            url: "./contact_me.php",
-            type: "POST",
-            data: {
-              name: this.name.value,
-              phone: 0,
-              email: this.email.value,
-              message: this.message.value,
-            },
-            cache: false,
-          })
+        axios({
+          method: "post",
+          url: "./js/contact_me.php",
+          data: {
+            name: this.name.value,
+            phone: 0,
+            email: this.email.value,
+            message: this.message.value,
+          },
+          cache: false,
+        })
           .then(() => {
             this.formSendSuccesfully = true;
           })
