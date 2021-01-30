@@ -1,43 +1,81 @@
 <template>
-  <div class="main main-raised">
-    <div class="section">
-      <div class="container">
-        <div class="md-layout">
-          <div
-            class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
+  <div>
+    <div id="board">
+      <div
+        class="cell md-layout-item md-size-10  md-small-size-10 md-layout-item"
+        v-for="(element, index) in this.numberOfCells"
+        :key="index"
+      ></div>
+      <modal v-if="!isGameStarted">
+        <template v-slot:title>
+          <h2 v-if="!isGameLost">Furry Game</h2>
+          <h2 v-else>Przegrana</h2></template
+        >
+        <template v-slot:content>
+          <p v-if="!isGameLost">
+            Steruj Furrym za pomocą strzałek.<br />
+            Postaraj się zebrać jak najwięcej monet. Powodzenia!
+          </p>
+
+          <p v-else>Zebrałeś {{ score }} monet!<br />Spróbuj jeszcze raz!</p>
+          <md-button class="md-success md-round" @click="startGame()"
+            >Rozpocznij grę</md-button
           >
-            <div id="board">
-              <div
-                class="cell md-layout-item md-size-10"
-                v-for="(element, index) in this.numberOfCells"
-                :key="index"
-              ></div>
-            </div>
-            <div class="text-center score">
-              <h4>Wynik: {{ this.score }}</h4>
-            </div>
-          </div>
+        </template>
+      </modal>
+    </div>
+    <div class="text-center score">
+      <h4>Wynik: {{ this.score }}</h4>
+    </div>
+    <div class="mobileBtnsWrapper">
+      <div
+        class="mobileBtnsWrapper__mobileBtns  md-size-50  md-xsmall-size-50 md-layout-item"
+      >
+        <div class="mobileBtnsWrapper__mobileBtns__upBtnWrapper text-center">
+          <md-button
+            class="md-default md-just-icon md-round"
+            @click="
+              () => {
+                furryPosition.direction = 'up';
+              }
+            "
+            ><md-icon>keyboard_arrow_up</md-icon></md-button
+          >
+        </div>
+        <div class="mobileBtnsWrapper__mobileBtns__leftBtnWrapper text-center">
+          <md-button
+            class="md-default md-just-icon md-round"
+            @click="
+              () => {
+                furryPosition.direction = 'left';
+              }
+            "
+            ><md-icon>keyboard_arrow_left</md-icon></md-button
+          >
+
+          <md-button
+            class="md-default md-just-icon md-round"
+            @click="
+              () => {
+                furryPosition.direction = 'right';
+              }
+            "
+            ><md-icon>keyboard_arrow_right</md-icon></md-button
+          >
+        </div>
+        <div class="mobileBtnsWrapper__mobileBtns__upBtnWrapper text-center">
+          <md-button
+            class="md-default md-just-icon md-round"
+            @click="
+              () => {
+                furryPosition.direction = 'down';
+              }
+            "
+            ><md-icon>keyboard_arrow_down</md-icon></md-button
+          >
         </div>
       </div>
     </div>
-
-    <modal v-if="!isGameStarted">
-      <template v-slot:title>
-        <h2 v-if="!isGameLost">Furry Game</h2>
-        <h2 v-else>Przegrana</h2></template
-      >
-      <template v-slot:content>
-        <p v-if="!isGameLost">
-          Steruj Furrym za pomocą strzałek.<br />
-          Postaraj się zebrać jak najwięcej monet. Powodzenia!
-        </p>
-
-        <p v-else>Zebrałeś {{ score }} monet!<br />Spróbuj jeszcze raz!</p>
-        <md-button class="md-success md-round" @click="startGame()"
-          >Rozpocznij grę</md-button
-        >
-      </template>
-    </modal>
   </div>
 </template>
 
@@ -197,6 +235,8 @@ export default {
   border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  width: 322px;
 }
 .cell {
   border: 1px solid black;
@@ -222,10 +262,26 @@ export default {
 }
 @media screen and (min-width: 768px) {
   .cell {
-    height: 64px;
+    height: 60px;
+  }
+  #board {
+    width: 600px;
   }
 }
 .score {
   color: green;
+}
+.mobileBtnsWrapper {
+  display: flex;
+  justify-content: flex-end;
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
+  &__mobileBtns {
+    &__leftBtnWrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 </style>

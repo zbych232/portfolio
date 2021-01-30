@@ -72,26 +72,32 @@
         </div>
         <div class="md-layout">
           <div class="md-size-50  md-xsmall-size-100 md-layout-item">
-            <div class="myProjectsSection__projectItem text-center">
-              <img :src="projectImage" alt="Rounded Image" />
-              <div class="myProjectsSection__projectItem__textSection">
-                <h3>Ml Trans</h3>
-                <div class="dotsSpacing">
-                  <div
-                    class="dotsSpacing__dot"
-                    v-for="(element, index) in dots"
-                    :key="index"
-                  ></div>
+            <router-link :to="{ name: 'furryGame' }">
+              <div class="myProjectsSection__projectItem text-center">
+                <img
+                  src="../assets/img/furryGame/furryScreen.png"
+                  alt="Rounded Image"
+                />
+                <div class="myProjectsSection__projectItem__textSection">
+                  <h3>Furry Game</h3>
+                  <div class="dotsSpacing">
+                    <div
+                      class="dotsSpacing__dot"
+                      v-for="(element, index) in dots"
+                      :key="index"
+                    ></div>
+                  </div>
+                  <h4>Simple JavaScript game</h4>
+                  <p>
+                    This project required me to put in all my experience as a
+                    full-stack developer to create a design and set themes for
+                    the website. It also required a smooth design that could
+                    work on different browsers, and I successfully achieved the
+                    goal.
+                  </p>
                 </div>
-                <h4>High quality transport and logistic services</h4>
-                <p>
-                  This project required me to put in all my experience as a
-                  full-stack developer to create a design and set themes for the
-                  website. It also required a smooth design that could work on
-                  different browsers, and I successfully achieved the goal.
-                </p>
               </div>
-            </div>
+            </router-link>
             <div class="myProjectsSection__projectItem text-center">
               <img :src="projectImage" alt="Rounded Image" />
               <div class="myProjectsSection__projectItem__textSection">

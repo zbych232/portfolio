@@ -2,7 +2,7 @@
   <div>
     <div class="modalBackground"></div>
     <div class="modalWrapper">
-      <div class="modalWindow col-lg-3  text-center">
+      <div class="modalWindow text-center  md-size-50  md-small-size-90 md-layout-item">
         <slot name="title"></slot>
         <slot name="content"></slot>
       </div>
