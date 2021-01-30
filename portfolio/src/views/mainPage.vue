@@ -64,7 +64,7 @@
         ></path>
       </svg>
     </div>
-    <div class="section myProjectsSection">
+    <div class="section myProjectsSection" id="projectsSection">
       <div class="container">
         <div class="myProjectsSection__title text-center">
           <h2>My recent projects</h2>
@@ -72,6 +72,32 @@
         </div>
         <div class="md-layout">
           <div class="md-size-50  md-xsmall-size-100 md-layout-item">
+            <a href="https://incpraca.pl">
+              <div class="myProjectsSection__projectItem text-center">
+                <img
+                  src="../assets/img/incPraca/incPracaScreen.png"
+                  alt="Rounded Image"
+                />
+                <div class="myProjectsSection__projectItem__textSection">
+                  <h3>IncPraca</h3>
+                  <div class="dotsSpacing">
+                    <div
+                      class="dotsSpacing__dot"
+                      v-for="(element, index) in dots"
+                      :key="index"
+                    ></div>
+                  </div>
+                  <h4>High quality transport and logistic services</h4>
+                  <p>
+                    This project required me to put in all my experience as a
+                    full-stack developer to create a design and set themes for
+                    the website. It also required a smooth design that could
+                    work on different browsers, and I successfully achieved the
+                    goal.
+                  </p>
+                </div>
+              </div>
+            </a>
             <router-link :to="{ name: 'furryGame' }">
               <div class="myProjectsSection__projectItem text-center">
                 <img
@@ -98,31 +124,43 @@
                 </div>
               </div>
             </router-link>
-            <div class="myProjectsSection__projectItem text-center">
-              <img :src="projectImage" alt="Rounded Image" />
-              <div class="myProjectsSection__projectItem__textSection">
-                <h3>Ml Trans</h3>
-                <div class="dotsSpacing">
-                  <div
-                    class="dotsSpacing__dot"
-                    v-for="(element, index) in dots"
-                    :key="index"
-                  ></div>
+            <a href="https://sprawdz-za-darmo.pl/">
+              <div class="myProjectsSection__projectItem text-center">
+                <div class="wordpressSign">
+                  <img :src="brandImageWordpress" />
                 </div>
-                <h4>High quality transport and logistic services</h4>
-                <p>
-                  This project required me to put in all my experience as a
-                  full-stack developer to create a design and set themes for the
-                  website. It also required a smooth design that could work on
-                  different browsers, and I successfully achieved the goal.
-                </p>
+                <img
+                  src="../assets/img/wordpress/sprawdzZaDarmoScreen.png"
+                  alt="Rounded Image"
+                />
+                <div class="myProjectsSection__projectItem__textSection">
+                  <h3>Sprawdź za darmo</h3>
+                  <div class="dotsSpacing">
+                    <div
+                      class="dotsSpacing__dot"
+                      v-for="(element, index) in dots"
+                      :key="index"
+                    ></div>
+                  </div>
+                  <h4>Wordpress Website</h4>
+                  <p>
+                    This project required me to put in all my experience as a
+                    full-stack developer to create a design and set themes for
+                    the website. It also required a smooth design that could
+                    work on different browsers, and I successfully achieved the
+                    goal.
+                  </p>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="md-size-50  md-xsmall-size-100 md-layout-item">
-            <div class="myProjectsSection__projectItem text-center">
+            <div
+              class="myProjectsSection__projectItem text-center"
+              style="background-color: #5000ca; "
+            >
               <div class="myProjectsSection__projectItem__textSection">
-                <h3>Ml Trans</h3>
+                <h3 style="color:white">To do list</h3>
                 <div class="dotsSpacing">
                   <div
                     class="dotsSpacing__dot"
@@ -130,34 +168,100 @@
                     :key="index"
                   ></div>
                 </div>
-                <h4>High quality transport and logistic services</h4>
-                <p>
+                <h4 style="color:white">
+                  High quality transport and logistic services
+                </h4>
+                <p style="color:white">
                   This project required me to put in all my experience as a
                   full-stack developer to create a design and set themes for the
                   website.
                 </p>
               </div>
             </div>
-            <div class="myProjectsSection__projectItem text-center">
-              <img :src="projectImage" alt="Rounded Image" />
-              <div class="myProjectsSection__projectItem__textSection">
-                <h3>Ml Trans</h3>
-                <div class="dotsSpacing">
-                  <div
-                    class="dotsSpacing__dot"
-                    v-for="(element, index) in dots"
-                    :key="index"
-                  ></div>
+            <router-link :to="{ name: 'gameOfLife' }">
+              <div class="myProjectsSection__projectItem text-center">
+                <img
+                  src="../assets/img/gameOfLife/gameOfLifeScreen.png"
+                  alt="Rounded Image"
+                />
+                <div class="myProjectsSection__projectItem__textSection">
+                  <h3>Game of life</h3>
+                  <div class="dotsSpacing">
+                    <div
+                      class="dotsSpacing__dot"
+                      v-for="(element, index) in dots"
+                      :key="index"
+                    ></div>
+                  </div>
+                  <h4>Simple JavaScript game</h4>
+                  <p>
+                    This project required me to put in all my experience as a
+                    full-stack developer to create a design and set themes for
+                    the website. It also required a smooth design that could
+                    work on different browsers, and I successfully achieved the
+                    goal.
+                  </p>
                 </div>
-                <h4>High quality transport and logistic services</h4>
-                <p>
-                  This project required me to put in all my experience as a
-                  full-stack developer to create a design and set themes for the
-                  website. It also required a smooth design that could work on
-                  different browsers, and I successfully achieved the goal.
-                </p>
               </div>
-            </div>
+            </router-link>
+            <a href="https://psychologia-wokol-nas.pl/">
+              <div class="myProjectsSection__projectItem text-center">
+                <div class="wordpressSign">
+                  <img :src="brandImageWordpress" />
+                </div>
+                <img
+                  src="../assets/img/wordpress/psychologiaWokolNas.png"
+                  alt="Rounded Image"
+                />
+                <div class="myProjectsSection__projectItem__textSection">
+                  <h3>Psychologia wokół nas</h3>
+                  <div class="dotsSpacing">
+                    <div
+                      class="dotsSpacing__dot"
+                      v-for="(element, index) in dots"
+                      :key="index"
+                    ></div>
+                  </div>
+                  <h4>Wordpress Website</h4>
+                  <p>
+                    This project required me to put in all my experience as a
+                    full-stack developer to create a design and set themes for
+                    the website. It also required a smooth design that could
+                    work on different browsers, and I successfully achieved the
+                    goal.
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a href="https://przedszkole-rozprza.pl/">
+              <div class="myProjectsSection__projectItem text-center">
+                <div class="wordpressSign">
+                  <img :src="brandImageWordpress" />
+                </div>
+                <img
+                  src="../assets/img/wordpress/przedszkoleRozprza.png"
+                  alt="Rounded Image"
+                />
+                <div class="myProjectsSection__projectItem__textSection">
+                  <h3>Akademia malucha</h3>
+                  <div class="dotsSpacing">
+                    <div
+                      class="dotsSpacing__dot"
+                      v-for="(element, index) in dots"
+                      :key="index"
+                    ></div>
+                  </div>
+                  <h4>Wordpress Website</h4>
+                  <p>
+                    This project required me to put in all my experience as a
+                    full-stack developer to create a design and set themes for
+                    the website. It also required a smooth design that could
+                    work on different browsers, and I successfully achieved the
+                    goal.
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -292,7 +396,7 @@
         </div>
       </div>
     </div>
-    <div class="section ">
+    <div class="section " id="contactSection">
       <div class="container">
         <div class="md-layout">
           <div class="md-size-50  md-xsmall-size-100 md-layout-item">
@@ -446,6 +550,7 @@ export default {
   }
 
   &__projectItem {
+    position: relative;
     transition: width 0s;
     cursor: pointer;
     border-radius: 10px;
@@ -563,5 +668,12 @@ export default {
     font-size: 1.2em;
     font-weight: 400;
   }
+}
+.wordpressSign {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -10px;
+  top: -10px;
 }
 </style>

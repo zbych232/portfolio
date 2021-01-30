@@ -1,25 +1,24 @@
 <template>
-  <div class="main main-raised">
-    <div class="section">
-      <div class="container">
-        <div class="md-layout">
-          <div
-            class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
-          >
-            <div class="board">
-              <div
-                class="board__cell "
-                v-for="(element, index) in boardSize"
-                :key="index"
-                @click="(e) => addAliveClass(e)"
-              ></div>
-            </div>
-            <button @click="startFun()" v-if="!toggleStart">Start</button>
-            <button @click="stopFun()" v-if="toggleStart">Stop</button>
-          </div>
-        </div>
-      </div>
+  <div class="text-center">
+    <div class="board ">
+      <div
+        class="board__cell "
+        v-for="(element, index) in boardSize"
+        :key="index"
+        @click="(e) => addAliveClass(e)"
+      ></div>
     </div>
+<div class="btnsWrapper">
+    <md-button
+      class="md-warning md-round"
+      @click="startFun()"
+      v-if="!toggleStart"
+      >Start</md-button
+    >
+    <md-button class="md-warning md-round" @click="stopFun()" v-if="toggleStart"
+      >Stop</md-button
+    >
+</div>
   </div>
 </template>
 
@@ -201,6 +200,9 @@ export default {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  @media screen and (min-width: 768px) {
+    width: 800px;
+  }
 
   &__cell {
     height: 14px;
@@ -212,6 +214,9 @@ export default {
   }
 }
 .aliveClass {
-  background-color: #90be6d;
+  background-color: #5000ca;
+}
+.btnsWrapper{
+  margin-top:10px;
 }
 </style>

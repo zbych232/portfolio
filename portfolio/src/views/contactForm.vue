@@ -74,7 +74,7 @@
         <p v-if="message.errorMsg != ''" style="color:red">
           {{ message.errorMsg }}
         </p>
-        <md-button class="md-primary md-round" type="submit" @click="sendForm"
+        <md-button class="md-warning md-round" type="submit" @click="sendForm"
           >Send a message</md-button
         >
       </form>
@@ -125,7 +125,7 @@ export default {
         this.name.errorMsg = "";
         this.name.isValid = true;
       } else {
-        this.name.errorMsg = "Name must have min 1 character";
+        this.name.errorMsg = "Name field can't be empty";
         this.name.isValid = false;
       }
     },
@@ -150,7 +150,7 @@ export default {
         this.message.errorMsg = "";
         this.message.isValid = true;
       } else {
-        this.message.errorMsg = "Message must have min 1 character";
+        this.message.errorMsg = "Message field can't be empty";
         this.message.isValid = false;
       }
     },

@@ -18,7 +18,7 @@
           </p>
 
           <p v-else>Zebrałeś {{ score }} monet!<br />Spróbuj jeszcze raz!</p>
-          <md-button class="md-success md-round" @click="startGame()"
+          <md-button class="md-warning md-round" @click="startGame()"
             >Rozpocznij grę</md-button
           >
         </template>
@@ -269,7 +269,10 @@ export default {
   }
 }
 .score {
-  color: green;
+  color: #ff5252;
+  h4{
+  font-weight:800;
+  }
 }
 .mobileBtnsWrapper {
   display: flex;

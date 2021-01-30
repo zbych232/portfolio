@@ -1,22 +1,25 @@
 <template>
   <div class="wrapper">
-    <projectHeader>
-      <template v-slot:title>{{ gameOfLife.title }}</template>
-      <template v-slot:description>{{ gameOfLife.description }}</template>
-    </projectHeader>
-
-    <gameOfLife></gameOfLife>
+    <div class="section text-center" style="padding-bottom:0">
+      <div class="container">
+        <div class="headerContainer">
+          <h1>{{ gameOfLife.title }}</h1>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container gameOfLifeWrapper">
+        <gameOfLife></gameOfLife>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import projectHeader from "../customComponents/projectHeader";
-
 import gameOfLife from "../customComponents/gameOfLife";
 
 export default {
   components: {
-    projectHeader,
     gameOfLife,
   },
   bodyClass: "landing-page",
@@ -65,15 +68,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.md-card-actions.text-center {
+.headerContainer {
+  margin-top: 100px;
+}
+.gameOfLifeWrapper {
+  padding-top: 40px;
   display: flex;
-  justify-content: center !important;
-}
-.contact-form {
-  margin-top: 30px;
-}
-
-.md-has-textarea + .md-layout {
-  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
 }
 </style>

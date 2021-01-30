@@ -33,12 +33,21 @@
                   <p>O mnie</p>
                 </md-list-item>
               </router-link>
-              <router-link :to="{ name: 'furryGame' }">
-                <md-list-item href="javascript:void(0)">
-                  <i class="material-icons">fingerprint</i>
-                  <p>Projekty</p>
-                </md-list-item>
-              </router-link>
+
+              <md-list-item
+                href="javascript:void(0)"
+                @click="scrollToElement('projectsSection')"
+              >
+                <i class="material-icons">fingerprint</i>
+                <p>Projekty</p>
+              </md-list-item>
+              <md-list-item
+                href="javascript:void(0)"
+                @click="scrollToElement('contactSection')"
+              >
+                <i class="material-icons">contact_mail</i>
+                <p>Kontakt</p>
+              </md-list-item>
 
               <!-- <li class="md-list-item">
                 <a
@@ -210,10 +219,14 @@ export default {
     scrollListener() {
       resizeThrottler(this.handleScroll);
     },
-    scrollToElement() {
-      let element_id = document.getElementById("downloadSection");
+    scrollToElement(id) {
+      if (this.$route.path != "/") {
+        this.$router.push({ path: "/#" + id });
+      }
+      let element_id = document.getElementById(id);
+      console.log("check: ", element_id);
       if (element_id) {
-        element_id.scrollIntoView({ block: "end", behavior: "smooth" });
+        element_id.scrollIntoView({ behavior: "smooth" });
       }
     },
   },
