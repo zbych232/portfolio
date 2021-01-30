@@ -231,7 +231,7 @@ export default {
         this.$router.push({ path: "/#" + id });
       }
       let element_id = document.getElementById(id);
-      console.log("check: ", element_id);
+
       if (element_id) {
         element_id.scrollIntoView({ behavior: "smooth" });
       }
