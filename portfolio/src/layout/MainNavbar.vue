@@ -8,7 +8,14 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">Vue Material Kit</h3>
+        <div class="md-title">
+          <span style="font-weight:800; color: black ;font-size:28px"
+            >Zbigniew</span
+          >
+          <span style="font-weight:800; color: #5000ca; font-size:28px"
+            >Stolarski.</span
+          >
+        </div>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
