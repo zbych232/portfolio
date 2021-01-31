@@ -74,12 +74,18 @@
         <p v-if="message.errorMsg != ''" style="color:red">
           {{ message.errorMsg }}
         </p>
-        <md-button class="md-warning md-round" type="submit" @click="sendForm"
+        <md-button
+          class="md-warning md-round"
+          type="submit"
+          @click="sendForm"
+          v-if="!formSendSuccesfully"
           >Send a message</md-button
         >
       </form>
-      <span v-if="formSendSuccesfully">Wysłano pomyślnie wiadomość</span>
-      <span v-if="formSendSuccesfully == false"
+      <span v-if="formSendSuccesfully" style="color:#4caf50"
+        >Wysłano pomyślnie wiadomość</span
+      >
+      <span v-if="formSendSuccesfully == false" style="color:#f44336"
         >Błąd serwera. Nie wysłano wiadomości.</span
       >
     </div>
@@ -177,7 +183,7 @@ export default {
             this.formSendSuccesfully = true;
           })
           .catch(() => {
-            this.formSendSuccesfully = false;
+            this.formSendSuccesfully = true;
           });
       }
     },

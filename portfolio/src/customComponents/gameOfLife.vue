@@ -170,7 +170,6 @@ export default {
       let cellsArray = document.getElementsByClassName("board__cell");
       let beforeNextGeneration = [...this.futureArray];
       this.intervalll = setInterval(() => {
-        console.log("+1");
         beforeNextGeneration = [...this.futureArray];
         this.futureArray = [];
         this.computeNextGeneration();
