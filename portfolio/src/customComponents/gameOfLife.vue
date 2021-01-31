@@ -8,17 +8,20 @@
         @click="(e) => addAliveClass(e)"
       ></div>
     </div>
-<div class="btnsWrapper">
-    <md-button
-      class="md-warning md-round"
-      @click="startFun()"
-      v-if="!toggleStart"
-      >Start</md-button
-    >
-    <md-button class="md-warning md-round" @click="stopFun()" v-if="toggleStart"
-      >Stop</md-button
-    >
-</div>
+    <div class="btnsWrapper">
+      <md-button
+        class="md-warning md-round"
+        @click="startFun()"
+        v-if="!toggleStart"
+        >Start</md-button
+      >
+      <md-button
+        class="md-warning md-round"
+        @click="stopFun()"
+        v-if="toggleStart"
+        >Stop</md-button
+      >
+    </div>
   </div>
 </template>
 
@@ -35,18 +38,23 @@ export default {
   },
   data: function() {
     return {
-      boardSize: 2500,
+      boardSize: 625,
       futureArray: [],
       toggleStart: false,
     };
+  },
+  beforeMount() {
+    for (var i = 0; i < this.boardSize; i++) {
+      this.futureArray.push(0);
+    }
   },
   methods: {
     addAliveClass(e) {
       e.target.classList.add("aliveClass");
     },
     computeNextGeneration() {
-      for (var i = 0; i < 50; i++) {
-        for (var j = 0; j < 50; j++) {
+      for (var i = 0; i < 25; i++) {
+        for (var j = 0; j < 25; j++) {
           this.futureArray.push(this.computeCellNextState(j, i));
         }
       }
@@ -81,7 +89,7 @@ export default {
           numberOfNaighbours++;
         }
       }
-      if (this.calculateCellIndex(x + 1, y) <= 2499) {
+      if (this.calculateCellIndex(x + 1, y) <= 624) {
         if (
           cellsArray[this.calculateCellIndex(x + 1, y)].classList.contains(
             "aliveClass"
@@ -90,7 +98,7 @@ export default {
           numberOfNaighbours++;
         }
       }
-      if (this.calculateCellIndex(x + 1, y + 1) <= 2499) {
+      if (this.calculateCellIndex(x + 1, y + 1) <= 624) {
         if (
           cellsArray[this.calculateCellIndex(x + 1, y + 1)].classList.contains(
             "aliveClass"
@@ -99,7 +107,7 @@ export default {
           numberOfNaighbours++;
         }
       }
-      if (this.calculateCellIndex(x, y + 1) <= 2499) {
+      if (this.calculateCellIndex(x, y + 1) <= 624) {
         if (
           cellsArray[this.calculateCellIndex(x, y + 1)].classList.contains(
             "aliveClass"
@@ -108,7 +116,7 @@ export default {
           numberOfNaighbours++;
         }
       }
-      if (this.calculateCellIndex(x - 1, y + 1) <= 2499) {
+      if (this.calculateCellIndex(x - 1, y + 1) <= 624) {
         if (
           cellsArray[this.calculateCellIndex(x - 1, y + 1)].classList.contains(
             "aliveClass"
@@ -155,30 +163,36 @@ export default {
       }
     },
     calculateCellIndex(x, y) {
-      return x + y * 50;
+      return x + y * 25;
     },
     startFun() {
       this.toggleStart = this.toggleStart ? false : true;
       let cellsArray = document.getElementsByClassName("board__cell");
-
+      let beforeNextGeneration = [...this.futureArray];
       this.intervalll = setInterval(() => {
+        console.log("+1");
+        beforeNextGeneration = [...this.futureArray];
         this.futureArray = [];
         this.computeNextGeneration();
 
         this.futureArray.forEach((element, index) => {
-          if (element === 1) {
+          if (element == 1) {
             cellsArray[index].classList.add("aliveClass");
           }
-          if (element === 0) {
+          if (element == 0) {
             cellsArray[index].classList.remove("aliveClass");
           }
         });
 
-        if (this.futureArray.every((e) => e === 0)) {
+        if (
+          this.futureArray.every((e) => e == 0) ||
+          JSON.stringify(beforeNextGeneration) ==
+            JSON.stringify(this.futureArray)
+        ) {
           clearInterval(this.intervalll);
           this.toggleStart = this.toggleStart ? false : true;
         }
-      }, 250);
+      }, 1000);
     },
     stopFun() {
       this.toggleStart = this.toggleStart ? false : true;
@@ -205,18 +219,27 @@ export default {
   }
 
   &__cell {
-    height: 14px;
+    height: 28px;
     border: 1px solid rgba(0, 0, 0, 0.06);
-    width: 2%;
+    width: 4%;
     @media screen and (max-width: 768px) {
-      height: 7px;
+      height: 14px;
     }
   }
 }
 .aliveClass {
-  background-color: #5000ca;
+  animation-name: blinkingDotColor;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  @keyframes blinkingDotColor {
+    0% {
+    }
+    100% {
+      background-color: #5000ca;
+    }
+  }
 }
-.btnsWrapper{
-  margin-top:10px;
+.btnsWrapper {
+  margin-top: 10px;
 }
 </style>
