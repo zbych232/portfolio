@@ -38,8 +38,9 @@ export default {
 .modalBackground {
   z-index: 9;
   background-color: black;
-  opacity: 0.8;
+  opacity: 0.6;
   position: absolute;
+  border-radius:10px;
   width: 100%;
   height: 100%;
   top: 0;

@@ -235,7 +235,7 @@ export default {
   border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
-  position: relative;
+  //position: relative;
   width: 322px;
 }
 .cell {
