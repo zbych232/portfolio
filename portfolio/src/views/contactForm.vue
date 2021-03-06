@@ -188,8 +188,8 @@ export default {
       font-weight: 400;
       margin: 0;
       @media only screen and (max-width: 992px) {
-      font-weight:100;
-    }
+        font-weight: 100;
+      }
     }
     &__dotWrapper {
       width: 30px;
@@ -240,9 +240,9 @@ export default {
   }
   &__form {
     margin-top: 20px;
-   @media only screen and (max-width: 992px) {
-    text-align:center;
-  }
+    @media only screen and (max-width: 992px) {
+      text-align: center;
+    }
     textarea {
       resize: none;
       width: 100%;

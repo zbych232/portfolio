@@ -2,6 +2,8 @@
   <div class="wrapper">
     <div class="section">
       <div class="fancyShape"></div>
+      <div class="fancyShapePageBottom1"></div>
+      <div class="fancyShapePageBottom2"></div>
       <div class="container">
         <div class="headerContainer">
           <h1>Hi there!</h1>
@@ -22,14 +24,9 @@
         <div class="container">
           <div class="md-layout">
             <div
-              class="aboutMe__photoSection md-size-50  md-xsmall-size-100 md-layout-item ml-auto"
+              class="aboutMe__photoSection md-size-50 md-small-size-100 md-layout-item"
             >
-              <img
-                :src="image"
-                alt="Rounded Image"
-                class="rounded"
-                :class="{ 'responsive-image': responsive }"
-              />
+              <img :src="image" alt="Rounded Image" class="rounded" />
             </div>
             <div
               class="aboutMe__textSection md-size-50  md-small-size-100 md-layout-item"
@@ -49,7 +46,9 @@
                 join your team, and I'm willing to work efficiently and
                 thoroughly with your in-house team.
               </p>
-              <md-button class="md-white md-round md-lg" style="color: rgb(80, 0, 202) !important"
+              <md-button
+                class="md-white md-round md-lg"
+                style="color: rgb(80, 0, 202) !important"
                 >Download CV</md-button
               >
             </div>
@@ -68,7 +67,7 @@
       <div class="container">
         <div class="myProjectsSection__title text-center">
           <h2>My recent projects</h2>
-          <h3>Here are a few design projects I've worked on recently.</h3>
+          <p>Here are a few design projects I've worked on recently.</p>
         </div>
         <div class="md-layout">
           <div class="md-size-50  md-xsmall-size-100 md-layout-item">
@@ -270,7 +269,7 @@
       <div class="container">
         <div class="myProjectsSection__title text-center">
           <h2>Skills & Tools</h2>
-          <h3>For those who know what they’re looking for...</h3>
+          <p>For those who know what they’re looking for...</p>
         </div>
         <div class="brandsContainer">
           <div class="brandsContainer__item">
@@ -517,6 +516,43 @@ export default {
     border-radius: 58% 42% 51% 49% / 51% 52% 48% 49%;
   }
 }
+.fancyShapePageBottom1 {
+  position: absolute;
+  bottom: 200px;
+  width: 200px;
+  height: 400px;
+  @media only screen and (min-width: 768px) {
+    width: 130px;
+    height: 400px;
+  }
+  background-color: #5000ca;
+  border-radius: 0% 100% 100% 0% / 0% 49% 51% 100%;
+  animation-name: fancyShapePageBottom1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes fancyShapePageBottom1 {
+  0% {
+  }
+  100% {
+    border-radius: 0% 100% 100% 0% / 0% 58% 42% 100%;
+  }
+}
+.fancyShapePageBottom2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  @media only screen and (min-width: 768px) {
+    width: 400px;
+    height: 400px;
+  }
+  background-color: #5000ca;
+  border-radius: 100% 0% 0% 100% / 100% 0% 100% 0%;
+}
+
 .aboutMe {
   background-color: #5000ca;
   color: white;
@@ -525,33 +561,52 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    img {
+      @media only screen and (max-width: 992px) {
+        width: 240px;
+      }
+    }
   }
   &__textSection {
-     @media only screen and (max-width: 992px) {
-      text-align:center;
+    @media only screen and (max-width: 992px) {
+      text-align: center;
     }
     h2 {
       margin-top: 0;
       font-weight: 400;
+      @media only screen and (max-width: 992px) {
+        font-size: 1.4em;
+        font-weight: 800;
+        margin: 20px 0;
+      }
     }
     p {
       font-size: 1.2em;
       font-weight: 400;
-       @media only screen and (max-width: 992px) {
-      font-weight:100;
-    }
+      @media only screen and (max-width: 992px) {
+        font-weight: 100;
+      }
     }
   }
 }
 .myProjectsSection {
+  padding-top: 0;
   &__title {
     h2 {
       color: black;
       text-transform: uppercase;
       font-weight: 400;
+      @media only screen and (max-width: 992px) {
+        font-size: 1.4em;
+        font-weight: 800;
+      }
     }
-    h3 {
+    p {
+      font-size: 1.5em;
       font-weight: 400;
+      @media only screen and (max-width: 992px) {
+        font-size: 1.2em;
+      }
     }
   }
 
@@ -667,17 +722,22 @@ export default {
 }
 .getInTouchText {
   @media only screen and (max-width: 992px) {
-    text-align:center;
+    text-align: center;
   }
   h2 {
     font-weight: 400;
     color: black;
+    @media only screen and (max-width: 992px) {
+      font-size: 1.4em;
+      font-weight: 800;
+    }
   }
   p {
     font-size: 1.2em;
     font-weight: 400;
-     @media only screen and (max-width: 992px) {
-      font-weight:100;
+    color: black;
+    @media only screen and (max-width: 992px) {
+      font-weight: 100;
     }
   }
 }
@@ -688,9 +748,13 @@ export default {
   right: -10px;
   top: -10px;
 }
-.contactSectionMobile{
-@media only screen and (max-width: 992px) {
-    padding-bottom: 20px; background-color:white; margin: 0 10px; border-radius:20px; box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.12);
+.contactSectionMobile {
+  @media only screen and (max-width: 992px) {
+    padding-bottom: 20px;
+    background-color: white;
+    margin: 0 10px;
+    border-radius: 20px;
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.12);
   }
 }
 </style>
