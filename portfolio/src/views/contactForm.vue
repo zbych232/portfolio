@@ -12,64 +12,44 @@
     <div class="contactFormContainer__form">
       <form>
         <div class=" contactFormContainer__form__input">
-          <label :for="name.id">Name</label>
-          <md-field
-            :class="{
-              'md-error': name.errorMsg != '',
-              'md-valid': name.isValid,
-            }"
-          >
-            <md-icon>face</md-icon>
-            <md-input
-              v-model="name.value"
-              type="text"
-              placeholder="Name"
-              :id="name.id"
-              required
-              @blur="nameValidation"
-              @input="nameOnInput"
-            ></md-input>
-            <md-icon v-if="name.isValid">done</md-icon>
-            <md-icon v-if="name.errorMsg != ''">clear</md-icon>
-          </md-field>
+          <input
+            v-model="name.value"
+            type="text"
+            placeholder="Name"
+            :id="name.id"
+            required
+            @blur="nameValidation"
+            @input="nameOnInput"
+            class="contactFormContainer__form__input__contactFormCustomInput"
+          />
           <p v-if="name.errorMsg != ''" style="color:red">
             {{ name.errorMsg }}
           </p>
         </div>
         <div class=" contactFormContainer__form__input">
-          <label :for="email.id">E-mail</label>
-          <md-field
-            :class="{
-              'md-error': email.errorMsg != '',
-              'md-valid': email.isValid,
-            }"
-          >
-            <md-icon>email</md-icon>
-            <md-input
-              v-model="email.value"
-              type="text"
-              placeholder="Email address"
-              :id="email.id"
-              required
-              @blur="emailValidation"
-              @input="emailOnInput"
-            ></md-input>
-            <md-icon v-if="email.isValid">done</md-icon>
-            <md-icon v-if="email.errorMsg != ''">clear</md-icon>
-          </md-field>
+          <input
+            v-model="email.value"
+            type="text"
+            placeholder="Email address"
+            :id="email.id"
+            required
+            @blur="emailValidation"
+            @input="emailOnInput"
+            class="contactFormContainer__form__input__contactFormCustomInput"
+          />
           <p v-if="email.errorMsg != ''" style="color:red">
             {{ email.errorMsg }}
           </p>
         </div>
 
-        <label :for="message.id">Message</label>
         <textarea
-          rows="10"
+          rows="6"
           :id="message.id"
           v-model="message.value"
           @blur="messageValidation"
           @input="messageOnInput"
           placeholder="How may I help you?"
+          class="contactFormContainer__form__input__contactFormCustomInput"
         ></textarea>
         <p v-if="message.errorMsg != ''" style="color:red">
           {{ message.errorMsg }}
@@ -193,11 +173,15 @@ export default {
 
 <style lang="scss" scoped>
 .contactFormContainer {
+  @media only screen and (max-width: 600px) {
+    padding: 0 20px;
+  }
   &__iAmAvaliable {
     display: flex;
     align-items: center;
     @media only screen and (max-width: 600px) {
       margin-top: 40px;
+      justify-content: center;
     }
 
     p {
@@ -253,14 +237,24 @@ export default {
     }
   }
   &__form {
-    margin-top: 40px;
+    margin-top: 20px;
     textarea {
       resize: none;
       width: 100%;
       font-size: 16px;
     }
     &__input {
-      margin-bottom: 40px;
+      &__contactFormCustomInput {
+        padding: 20px;
+        margin: 10px 0;
+        border: 0;
+        border-radius: 40px;
+        background-color: #f5f5f5;
+        font-size: 16px;
+        width: 100%;
+        font-family: Roboto, Noto Sans, -apple-system, BlinkMacSystemFont,
+          sans-serif;
+      }
     }
   }
 }
