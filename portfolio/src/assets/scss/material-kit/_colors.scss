@@ -264,7 +264,8 @@ $orange-A100: #ffd180 !default;
 $orange-A200: #ffab40 !default;
 $orange-A400: #ff9100 !default;
 $orange-A700: #ff6d00 !default;
-$orange: $orange-500 !default;
+//changed by zbigniew
+$orange: rgb(80, 0, 202) !default;
 
 
 $deep-orange-50: #fbe9e7 !default;

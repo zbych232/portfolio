@@ -49,7 +49,7 @@
                 join your team, and I'm willing to work efficiently and
                 thoroughly with your in-house team.
               </p>
-              <md-button class="md-warning md-round md-lg"
+              <md-button class="md-white md-round md-lg" style="color: rgb(80, 0, 202) !important"
                 >Download CV</md-button
               >
             </div>
