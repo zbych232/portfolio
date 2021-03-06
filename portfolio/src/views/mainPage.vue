@@ -398,7 +398,7 @@
     </div>
     <div class="section " id="contactSection">
       <div class="container">
-        <div class="md-layout">
+        <div class="md-layout contactSectionMobile">
           <div class="md-size-50  md-xsmall-size-100 md-layout-item">
             <div class="getInTouchText">
               <h2>Get in Touch</h2>
@@ -527,6 +527,9 @@ export default {
     justify-content: center;
   }
   &__textSection {
+     @media only screen and (max-width: 992px) {
+      text-align:center;
+    }
     h2 {
       margin-top: 0;
       font-weight: 400;
@@ -534,6 +537,9 @@ export default {
     p {
       font-size: 1.2em;
       font-weight: 400;
+       @media only screen and (max-width: 992px) {
+      font-weight:100;
+    }
     }
   }
 }
@@ -660,6 +666,9 @@ export default {
   }
 }
 .getInTouchText {
+  @media only screen and (max-width: 992px) {
+    text-align:center;
+  }
   h2 {
     font-weight: 400;
     color: black;
@@ -667,6 +676,9 @@ export default {
   p {
     font-size: 1.2em;
     font-weight: 400;
+     @media only screen and (max-width: 992px) {
+      font-weight:100;
+    }
   }
 }
 .wordpressSign {
@@ -675,5 +687,10 @@ export default {
   height: 40px;
   right: -10px;
   top: -10px;
+}
+.contactSectionMobile{
+@media only screen and (max-width: 992px) {
+    padding-bottom: 20px; background-color:white; margin: 0 10px; border-radius:20px; box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.12);
+  }
 }
 </style>

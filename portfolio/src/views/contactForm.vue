@@ -173,21 +173,23 @@ export default {
 
 <style lang="scss" scoped>
 .contactFormContainer {
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 992px) {
     padding: 0 20px;
   }
   &__iAmAvaliable {
     display: flex;
     align-items: center;
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 992px) {
       margin-top: 40px;
-      justify-content: center;
     }
 
     p {
       font-size: 1.2em;
       font-weight: 400;
       margin: 0;
+      @media only screen and (max-width: 992px) {
+      font-weight:100;
+    }
     }
     &__dotWrapper {
       width: 30px;
@@ -238,6 +240,9 @@ export default {
   }
   &__form {
     margin-top: 20px;
+   @media only screen and (max-width: 992px) {
+    text-align:center;
+  }
     textarea {
       resize: none;
       width: 100%;
