@@ -8,14 +8,16 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <div class="md-title">
-          <span style="font-weight:800; color: black ;font-size:28px"
-            >Zbigniew</span
-          >
-          <span style="font-weight:800; color: #5000ca; font-size:28px"
-            >Stolarski.</span
-          >
-        </div>
+        <router-link :to="{ name: 'mainPage' }">
+          <div class="md-title">
+            <span style="font-weight:800; color: black ;font-size:28px"
+              >Zbigniew</span
+            >
+            <span style="font-weight:800; color: #5000ca; font-size:28px"
+              >Stolarski.</span
+            >
+          </div>
+        </router-link>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -34,25 +36,23 @@
               <!-- Here you can add your items from the section-start of your toolbar -->
             </mobile-menu>
             <md-list>
-              
-                <md-list-item href="javascript:void(0)" @click="scrollToElement('aboutMe')">
-                  <i class="material-icons">content_paste</i>
-                  <p>O mnie</p>
-                </md-list-item>
-              
+              <md-list-item
+                href="javascript:void(0)"
+                @click="scrollToElement('aboutMe')"
+              >
+                <p>O mnie</p>
+              </md-list-item>
 
               <md-list-item
                 href="javascript:void(0)"
                 @click="scrollToElement('projectsSection')"
               >
-                <i class="material-icons">fingerprint</i>
                 <p>Projekty</p>
               </md-list-item>
               <md-list-item
                 href="javascript:void(0)"
                 @click="scrollToElement('contactSection')"
               >
-                <i class="material-icons">contact_mail</i>
                 <p>Kontakt</p>
               </md-list-item>
 
@@ -91,35 +91,40 @@
                 </a>
               </li> -->
 
-              <md-list-item
-                href="https://twitter.com/CreativeTim"
-                target="_blank"
-              >
-                <i class="fab fa-twitter"></i>
-                <p class="hidden-lg">Twitter</p>
+              <md-list-item href="https://github.com/zbych232" target="_blank">
+                <i class="fab fa-github"></i>
+                <p class="hidden-lg">Github</p>
                 <md-tooltip md-direction="bottom"
-                  >Follow us on Twitter</md-tooltip
+                  >See my projects on Github</md-tooltip
                 >
               </md-list-item>
               <md-list-item
-                href="https://www.facebook.com/CreativeTim"
+                href="https://www.linkedin.com/in/zbigniewcl/"
                 target="_blank"
               >
-                <i class="fab fa-facebook-square"></i>
-                <p class="hidden-lg">Facebook</p>
+                <i class="fab fa-linkedin"></i>
+                <p class="hidden-lg">LinkedIn</p>
                 <md-tooltip md-direction="bottom"
-                  >Like us on Facebook</md-tooltip
+                  >See my profile on LinkedIn</md-tooltip
                 >
               </md-list-item>
               <md-list-item
-                href="https://www.instagram.com/CreativeTimOfficial"
+                href="https://m.me/zbigniew.stolarski.167"
                 target="_blank"
               >
-                <i class="fab fa-instagram"></i>
-                <p class="hidden-lg">Instagram</p>
+                <i class="fab fa-facebook-messenger"></i>
+                <p class="hidden-lg">Messenger</p>
                 <md-tooltip md-direction="bottom"
-                  >Follow us on Instagram</md-tooltip
+                  >Contact me on Messenger</md-tooltip
                 >
+              </md-list-item>
+              <md-list-item
+                href="mailto:stolarskizbigniew93@gmail.com"
+                target="_blank"
+              >
+                <i class="material-icons">email</i>
+                <p class="hidden-lg">E-mail</p>
+                <md-tooltip md-direction="bottom">Send e-mail</md-tooltip>
               </md-list-item>
             </md-list>
           </div>

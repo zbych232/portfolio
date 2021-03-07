@@ -563,7 +563,7 @@ export default {
     justify-content: center;
     img {
       @media only screen and (max-width: 992px) {
-        width: 240px;
+        width: 200px;
       }
     }
   }
