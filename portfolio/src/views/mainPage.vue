@@ -833,7 +833,7 @@ export default {
   position: absolute;
   height: 90vh;
   top: calc(100vh - 90vh);
-  left: 9%;
+  left: 12%;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
