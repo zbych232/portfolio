@@ -451,6 +451,7 @@
 
 <script>
 import contactForm from "./contactForm";
+import $ from "jquery";
 export default {
   components: {
     contactForm,
@@ -485,12 +486,26 @@ export default {
   beforeDestroy() {
     window.removeEventListener("resize", this.onResponsiveInverted);
   },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+
   methods: {
     onResponsiveInverted() {
       if (window.innerWidth < 600) {
         this.responsive = true;
       } else {
         this.responsive = false;
+      }
+    },
+    handleScroll() {
+      if (window.scrollY > 0) {
+        $(".contactIconsWrapper").fadeOut();
+      } else {
+        $(".contactIconsWrapper").fadeIn();
       }
     },
   },
