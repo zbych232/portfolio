@@ -603,6 +603,9 @@ export default {
   border-radius: 100% 0% 0% 100% / 100% 0% 100% 0%;
 }
 #aboutMe {
+  @media only screen and (max-width: 480px) {
+    margin-top: -120px;
+  }
   @media only screen and (min-width: 992px) {
     margin-top: -220px;
   }
@@ -616,9 +619,11 @@ export default {
     align-items: center;
     justify-content: center;
     img {
+      @media only screen and (max-width: 375px) {
+        padding-top: 60px;
+      }
       @media only screen and (max-width: 992px) {
         width: 200px;
-        padding-top: 100px;
       }
     }
   }
@@ -814,7 +819,7 @@ export default {
 }
 .contactIconsWrapper {
   @media only screen and (max-width: 992px) {
-    left: 20px;
+    left: 10px;
   }
   position: absolute;
   height: 90vh;
