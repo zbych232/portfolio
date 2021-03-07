@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="section" id="aboutMe" style="padding:0">
+    <div class="section" id="aboutMe">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#5000ca"
@@ -479,8 +479,6 @@ export default {
       dots: 9,
     };
   },
-  props: {},
-  computed: {},
   mounted() {
     this.onResponsiveInverted();
     window.addEventListener("resize", this.onResponsiveInverted);
@@ -497,9 +495,9 @@ export default {
   computed: {
     numberOfDotsInContactsIcons: function() {
       if (window.innerWidth < 992) {
-        return 8;
+        return 16;
       } else {
-        return 40;
+        return 26;
       }
     },
   },
@@ -604,7 +602,11 @@ export default {
   background-color: #5000ca;
   border-radius: 100% 0% 0% 100% / 100% 0% 100% 0%;
 }
-
+#aboutMe {
+  @media only screen and (min-width: 992px) {
+    margin-top: -220px;
+  }
+}
 .aboutMe {
   background-color: #5000ca;
   color: white;
@@ -616,6 +618,7 @@ export default {
     img {
       @media only screen and (max-width: 992px) {
         width: 200px;
+        padding-top: 100px;
       }
     }
   }
@@ -816,7 +819,7 @@ export default {
   position: absolute;
   height: 90vh;
   top: calc(100vh - 90vh);
-  left: 160px;
+  left: 9%;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
