@@ -513,6 +513,10 @@ export default {
     handleScroll() {
       if (window.scrollY > 0) {
         $(".contactIconsWrapper").fadeOut();
+        $(".aboutMe__photoSection")
+          .find("img")
+          .fadeIn();
+        $(".aboutMe__textSection").fadeIn();
       } else {
         $(".contactIconsWrapper").fadeIn();
       }
@@ -613,6 +617,7 @@ export default {
 }
 .aboutMe {
   background-color: #5000ca;
+  min-height: 200px;
   color: white;
   margin: -10px 0px 0px 0px;
   &__photoSection {
@@ -620,15 +625,14 @@ export default {
     align-items: center;
     justify-content: center;
     img {
-      @media only screen and (max-width: 375px) {
-        padding-top: 80px;
-      }
+      display: none;
       @media only screen and (max-width: 992px) {
         width: 200px;
       }
     }
   }
   &__textSection {
+    display: none;
     @media only screen and (max-width: 992px) {
       text-align: center;
     }
