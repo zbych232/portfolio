@@ -420,6 +420,32 @@
         </div>
       </div>
     </div>
+    <div class="contactIconsWrapper">
+      <div
+        class="contactIconsWrapper__dot"
+        v-for="(element, index) in 30"
+        :key="index"
+      ></div>
+      <md-list-item href="https://github.com/zbych232" target="_blank">
+        <i class="fab fa-github"></i>
+        <md-tooltip md-direction="left">See my projects on Github</md-tooltip>
+      </md-list-item>
+      <md-list-item
+        href="https://www.linkedin.com/in/zbigniewcl/"
+        target="_blank"
+      >
+        <i class="fab fa-linkedin"></i>
+        <md-tooltip md-direction="left">See my profile on LinkedIn</md-tooltip>
+      </md-list-item>
+      <md-list-item href="https://m.me/zbigniew.stolarski.167" target="_blank">
+        <i class="fab fa-facebook-messenger"></i>
+        <md-tooltip md-direction="left">Contact me on Messenger</md-tooltip>
+      </md-list-item>
+      <md-list-item href="mailto:stolarskizbigniew93@gmail.com" target="_blank">
+        <i class="material-icons">email</i>
+        <md-tooltip md-direction="left">Send e-mail</md-tooltip>
+      </md-list-item>
+    </div>
   </div>
 </template>
 
@@ -755,6 +781,32 @@ export default {
     margin: 0 10px;
     border-radius: 20px;
     box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.12);
+  }
+}
+.contactIconsWrapper {
+  @media only screen and (max-width: 992px) {
+    display: none;
+  }
+  height: 50vh;
+  position: absolute;
+  top: calc(100vh - 50vh);
+  left: 220px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  &__dot {
+    width: 4px;
+    height: 4px;
+    background-color: black;
+    margin: 2px;
+    border-radius: 50%;
+  }
+  i:hover {
+    cursor: pointer;
+    color: #5000ca;
+  }
+  i {
+    color: black;
   }
 }
 </style>

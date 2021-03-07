@@ -40,92 +40,22 @@
                 href="javascript:void(0)"
                 @click="scrollToElement('aboutMe')"
               >
-                <p>O mnie</p>
+                <p class="navItem">O mnie</p>
               </md-list-item>
 
               <md-list-item
                 href="javascript:void(0)"
                 @click="scrollToElement('projectsSection')"
               >
-                <p>Projekty</p>
+                <p class="navItem">Projekty</p>
               </md-list-item>
-              <md-list-item
-                href="javascript:void(0)"
-                @click="scrollToElement('contactSection')"
-              >
-                <p>Kontakt</p>
-              </md-list-item>
-
-              <!-- <li class="md-list-item">
-                <a
-                  href="javascript:void(0)"
-                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
+              <div class="letsTalkNavbarBtnWrapper">
+                <md-button
+                  class="md-warning md-round letsTalkNavbarBtnWrapper__btn"
+                  @click="scrollToElement('contactSection')"
+                  ><md-icon>email</md-icon>Let's talk!</md-button
                 >
-                  <div class="md-list-item-content">
-                    <drop-down direction="down">
-                      <md-button
-                        slot="title"
-                        class="md-button md-button-link md-white md-simple dropdown-toggle"
-                        data-toggle="dropdown"
-                      >
-                        <i class="material-icons">view_carousel</i>
-                        <p>Projekty</p>
-                      </md-button>
-                      <ul class="dropdown-menu dropdown-with-icons">
-                        <li @click="routeFun('furryGame')">
-                          <a href="javascript:void(0)">
-                            <i class="material-icons">view_day</i>
-                            <p>Furry Game</p>
-                          </a>
-                        </li>
-
-                        <li @click="routeFun('gameOfLife')">
-                          <a href="javascript:void(0)">
-                            <i class="material-icons">fingerprint</i>
-                            <p>Game Of Life</p>
-                          </a>
-                        </li>
-                      </ul>
-                    </drop-down>
-                  </div>
-                </a>
-              </li> -->
-
-              <md-list-item href="https://github.com/zbych232" target="_blank">
-                <i class="fab fa-github"></i>
-                <p class="hidden-lg">Github</p>
-                <md-tooltip md-direction="bottom"
-                  >See my projects on Github</md-tooltip
-                >
-              </md-list-item>
-              <md-list-item
-                href="https://www.linkedin.com/in/zbigniewcl/"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin"></i>
-                <p class="hidden-lg">LinkedIn</p>
-                <md-tooltip md-direction="bottom"
-                  >See my profile on LinkedIn</md-tooltip
-                >
-              </md-list-item>
-              <md-list-item
-                href="https://m.me/zbigniew.stolarski.167"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-messenger"></i>
-                <p class="hidden-lg">Messenger</p>
-                <md-tooltip md-direction="bottom"
-                  >Contact me on Messenger</md-tooltip
-                >
-              </md-list-item>
-              <md-list-item
-                href="mailto:stolarskizbigniew93@gmail.com"
-                target="_blank"
-              >
-                <i class="material-icons">email</i>
-                <p class="hidden-lg">E-mail</p>
-                <md-tooltip md-direction="bottom">Send e-mail</md-tooltip>
-              </md-list-item>
+              </div>
             </md-list>
           </div>
         </div>
@@ -250,3 +180,24 @@ export default {
   },
 };
 </script>
+<style scoped lang="scss">
+.letsTalkNavbarBtnWrapper {
+  margin: 0 10px;
+  @media only screen and (max-width: 992px) {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    &__btn {
+      width: 80%;
+    }
+  }
+}
+.navItem {
+  margin: auto !important;
+  color: black;
+  font-weight: 800 !important;
+}
+.navItem:hover {
+  color: #5000ca;
+}
+</style>
