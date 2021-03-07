@@ -515,10 +515,14 @@ export default {
         $(".contactIconsWrapper").fadeOut();
         $(".aboutMe__photoSection")
           .find("img")
-          .fadeIn();
-        $(".aboutMe__textSection").fadeIn();
+          .fadeIn("slow");
+        $(".aboutMe__textSection").fadeIn("slow");
       } else {
         $(".contactIconsWrapper").fadeIn();
+        $(".aboutMe__photoSection")
+          .find("img")
+          .fadeOut("slow");
+        $(".aboutMe__textSection").fadeOut("slow");
       }
     },
   },
