@@ -49,6 +49,8 @@
               <md-button
                 class="md-white md-round md-lg"
                 style="color: rgb(80, 0, 202) !important"
+                href="zbigniewFrontendDeveloper.pdf"
+                target="_blank"
                 >Download CV</md-button
               >
             </div>
@@ -423,27 +425,27 @@
     <div class="contactIconsWrapper">
       <div
         class="contactIconsWrapper__dot"
-        v-for="(element, index) in 30"
+        v-for="(element, index) in 40"
         :key="index"
       ></div>
       <md-list-item href="https://github.com/zbych232" target="_blank">
         <i class="fab fa-github"></i>
-        <md-tooltip md-direction="left">See my projects on Github</md-tooltip>
+        <md-tooltip md-direction="left">Github</md-tooltip>
       </md-list-item>
       <md-list-item
         href="https://www.linkedin.com/in/zbigniewcl/"
         target="_blank"
       >
         <i class="fab fa-linkedin"></i>
-        <md-tooltip md-direction="left">See my profile on LinkedIn</md-tooltip>
+        <md-tooltip md-direction="left">LinkedIn</md-tooltip>
       </md-list-item>
       <md-list-item href="https://m.me/zbigniew.stolarski.167" target="_blank">
         <i class="fab fa-facebook-messenger"></i>
-        <md-tooltip md-direction="left">Contact me on Messenger</md-tooltip>
+        <md-tooltip md-direction="left">Messenger</md-tooltip>
       </md-list-item>
       <md-list-item href="mailto:stolarskizbigniew93@gmail.com" target="_blank">
         <i class="material-icons">email</i>
-        <md-tooltip md-direction="left">Send e-mail</md-tooltip>
+        <md-tooltip md-direction="left">E-mail</md-tooltip>
       </md-list-item>
     </div>
   </div>
@@ -802,10 +804,10 @@ export default {
   @media only screen and (max-width: 992px) {
     display: none;
   }
-  height: 50vh;
   position: absolute;
-  top: calc(100vh - 50vh);
-  left: 220px;
+  height: 90vh;
+  top: calc(100vh - 90vh);
+  left: 160px;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;

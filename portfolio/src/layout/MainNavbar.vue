@@ -40,14 +40,14 @@
                 href="javascript:void(0)"
                 @click="scrollToElement('aboutMe')"
               >
-                <p class="navItem">O mnie</p>
+                <p class="navItem">About</p>
               </md-list-item>
 
               <md-list-item
                 href="javascript:void(0)"
                 @click="scrollToElement('projectsSection')"
               >
-                <p class="navItem">Projekty</p>
+                <p class="navItem">Work</p>
               </md-list-item>
               <div class="letsTalkNavbarBtnWrapper">
                 <md-button
