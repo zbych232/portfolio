@@ -603,6 +603,7 @@ export default {
   border-radius: 100% 0% 0% 100% / 100% 0% 100% 0%;
 }
 #aboutMe {
+  padding-bottom: 0;
   @media only screen and (max-width: 480px) {
     margin-top: -120px;
   }
@@ -650,7 +651,7 @@ export default {
   }
 }
 .myProjectsSection {
-  padding-top: 0;
+  //padding-top: 0;
   &__title {
     h2 {
       color: black;
