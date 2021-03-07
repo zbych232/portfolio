@@ -425,7 +425,7 @@
     <div class="contactIconsWrapper">
       <div
         class="contactIconsWrapper__dot"
-        v-for="(element, index) in 40"
+        v-for="(element, index) in numberOfDotsInContactsIcons"
         :key="index"
       ></div>
       <md-list-item href="https://github.com/zbych232" target="_blank">
@@ -493,6 +493,15 @@ export default {
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
+  },
+  computed: {
+    numberOfDotsInContactsIcons: function() {
+      if (window.innerWidth < 992) {
+        return 8;
+      } else {
+        return 40;
+      }
+    },
   },
 
   methods: {
@@ -802,7 +811,7 @@ export default {
 }
 .contactIconsWrapper {
   @media only screen and (max-width: 992px) {
-    display: none;
+    left: 20px;
   }
   position: absolute;
   height: 90vh;

@@ -121,7 +121,8 @@
     right: auto;
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
-    border-right: 6px solid $white-color;
+    //border-right: 6px solid $white-color;
+    border-right: 6px solid black;
   }
 
   &.popover[x-placement="right"]:after {
@@ -129,7 +130,8 @@
     right: auto;
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
-    border-right: 6px solid $white-color;
+    //border-right: 6px solid $white-color;
+    border-right: 6px solid black;
   }
 }
 
