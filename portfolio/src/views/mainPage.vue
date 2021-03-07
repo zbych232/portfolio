@@ -621,7 +621,7 @@ export default {
     justify-content: center;
     img {
       @media only screen and (max-width: 375px) {
-        padding-top: 60px;
+        padding-top: 80px;
       }
       @media only screen and (max-width: 992px) {
         width: 200px;
