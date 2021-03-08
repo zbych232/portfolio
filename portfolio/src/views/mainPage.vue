@@ -513,16 +513,15 @@ export default {
     handleScroll() {
       if (window.scrollY > 0) {
         $(".contactIconsWrapper").fadeOut();
-        $(".aboutMe__photoSection")
-          .find("img")
-          .fadeIn("slow");
-        $(".aboutMe__textSection").fadeIn("slow");
+        $(".aboutMe__photoSection").css({
+          visibility: "visible",
+          opacity: "1",
+        });
+        $(".aboutMe__textSection").css({ visibility: "visible", opacity: "1" });
       } else {
         $(".contactIconsWrapper").fadeIn();
-        $(".aboutMe__photoSection")
-          .find("img")
-          .fadeOut("slow");
-        $(".aboutMe__textSection").fadeOut("slow");
+        $(".aboutMe__photoSection").css({ visibility: "hidden", opacity: "0" });
+        $(".aboutMe__textSection").css({ visibility: "hidden", opacity: "0" });
       }
     },
   },
@@ -625,18 +624,26 @@ export default {
   color: white;
   margin: -10px 0px 0px 0px;
   &__photoSection {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0.4s linear, opacity 0.4s linear;
+    -moz-transition: visibility 0.4s linear, opacity 0.4s linear;
+    -o-transition: visibility 0.4s linear, opacity 0.4s linear;
     display: flex;
     align-items: center;
     justify-content: center;
     img {
-      display: none;
       @media only screen and (max-width: 992px) {
         width: 200px;
       }
     }
   }
   &__textSection {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0.4s linear, opacity 0.4s linear;
+    -moz-transition: visibility 0.4s linear, opacity 0.4s linear;
+    -o-transition: visibility 0.4s linear, opacity 0.4s linear;
     @media only screen and (max-width: 992px) {
       text-align: center;
     }
