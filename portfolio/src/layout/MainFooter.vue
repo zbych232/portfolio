@@ -7,32 +7,47 @@
     <div class="container">
       <nav>
         <ul>
-          <li>
-            <a href="https://www.creative-tim.com">
-              Creative Tim
+          <li @click="scrollToElement('aboutMe')">
+            <a href="javascript:void(0)">
+              About
             </a>
           </li>
-          <li>
-            <a href="https:///presentation.creative-tim.com">
-              About Us
+          <li @click="scrollToElement('projectsSection')">
+            <a href="javascript:void(0)">
+              Work
             </a>
           </li>
-          <li>
-            <a href="https:///blog.creative-tim.com">
-              Blog
-            </a>
-          </li>
-          <li>
-            <a href="https://www.creative-tim.com/license">
-              Licenses
+          <li @click="scrollToElement('contactSection')">
+            <a href="javascript:void(0)">
+              Let's talk
             </a>
           </li>
         </ul>
       </nav>
       <div class="copyright">
-        &copy; {{ year }}, made with <md-icon>favorite</md-icon> by
-        <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a>
-        for a better web.
+        &copy; {{ year }}, made with 💜 by
+        <div class="md-title" style="display:inline">
+          <span style="font-weight:800; color: black ;font-size:16px"
+            >Zbigniew</span
+          >
+          <span style="font-weight:800; color: #5000ca; font-size:16px"
+            >Stolarski.</span
+          >
+        </div>
+      </div>
+      <div class="iconsContainer">
+        <div class="iconsContainer__iconWrapper">
+          <i class="fab fa-github"></i>
+        </div>
+        <div class="iconsContainer__iconWrapper">
+          <i class="fab fa-linkedin"></i>
+        </div>
+        <div class="iconsContainer__iconWrapper">
+          <i class="fab fa-facebook-messenger"></i>
+        </div>
+        <div class="iconsContainer__iconWrapper">
+          <i class="fas fa-envelope"></i>
+        </div>
       </div>
     </div>
   </footer>
@@ -41,13 +56,57 @@
 export default {
   props: {
     backgroundColor: String,
-    type: String
+    type: String,
   },
   data() {
     return {
-      year: new Date().getFullYear()
+      year: new Date().getFullYear(),
     };
-  }
+  },
+  methods: {
+    scrollToElement(id) {
+      if (this.$route.path != "/") {
+        this.$router.push({ path: "/#" + id });
+      }
+      let element_id = document.getElementById(id);
+
+      if (element_id) {
+        element_id.scrollIntoView({ behavior: "smooth" });
+      }
+    },
+  },
 };
 </script>
-<style></style>
+<style lang="scss" scoped>
+.container {
+  nav {
+    ul {
+      li {
+        color: black;
+      }
+    }
+  }
+}
+.copyright {
+  color: black;
+}
+.iconsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  &__iconWrapper {
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &__iconWrapper:hover {
+    background-color: white;
+  }
+}
+</style>

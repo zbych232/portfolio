@@ -31,7 +31,7 @@
             <div
               class="aboutMe__textSection md-size-50  md-small-size-100 md-layout-item"
             >
-              <h2>A bit about me</h2>
+              <h2>A bit about me 👋</h2>
               <p>
                 I am a freelance Web Developer with many years of experience
                 creating simple and modern designs from scratch using top-notch
@@ -68,7 +68,7 @@
     <div class="section myProjectsSection" id="projectsSection">
       <div class="container">
         <div class="myProjectsSection__title text-center">
-          <h2>My recent projects</h2>
+          <h2>My recent projects 🏆</h2>
           <p>Here are a few design projects I've worked on recently.</p>
         </div>
         <div class="md-layout">
