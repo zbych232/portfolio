@@ -36,16 +36,29 @@
         </div>
       </div>
       <div class="iconsContainer">
-        <div class="iconsContainer__iconWrapper">
+        <div
+          class="iconsContainer__iconWrapper"
+          @click="redirect('https://github.com/zbych232')"
+        >
           <i class="fab fa-github"></i>
         </div>
-        <div class="iconsContainer__iconWrapper">
+
+        <div
+          class="iconsContainer__iconWrapper"
+          @click="redirect('https://www.linkedin.com/in/zbigniewcl/')"
+        >
           <i class="fab fa-linkedin"></i>
         </div>
-        <div class="iconsContainer__iconWrapper">
+        <div
+          class="iconsContainer__iconWrapper"
+          @click="redirect('https://m.me/zbigniew.stolarski.167')"
+        >
           <i class="fab fa-facebook-messenger"></i>
         </div>
-        <div class="iconsContainer__iconWrapper">
+        <div
+          class="iconsContainer__iconWrapper"
+          @click="redirect('mailto:stolarskizbigniew93@gmail.com')"
+        >
           <i class="fas fa-envelope"></i>
         </div>
       </div>
@@ -73,6 +86,9 @@ export default {
       if (element_id) {
         element_id.scrollIntoView({ behavior: "smooth" });
       }
+    },
+    redirect(url) {
+      window.location.href = url;
     },
   },
 };
