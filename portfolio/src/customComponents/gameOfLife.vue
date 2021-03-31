@@ -9,7 +9,7 @@
       ></div>
       <modal v-if="!isGameStarted">
         <template v-slot:title>
-          <h2>Game of life</h2>
+          <h2>{{ !isReproductionStopped ? "START" : "GAME OVER" }}</h2>
         </template>
         <template v-slot:content>
           <p v-if="!isReproductionStopped">
@@ -62,7 +62,7 @@
         >Stop</md-button
       >
     </div>
-    <div>
+    <div style="margin-bottom:40px;">
       {{
         moment(timer)
           .lang("pl")
@@ -309,7 +309,7 @@ export default {
     0% {
     }
     100% {
-      background-color: #5000ca;
+      background-color: #00cba9;
     }
   }
 }

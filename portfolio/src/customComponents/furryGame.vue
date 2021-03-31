@@ -270,13 +270,14 @@ export default {
 }
 .score {
   color: #ff5252;
-  h4{
-  font-weight:800;
+  h4 {
+    font-weight: 800;
   }
 }
 .mobileBtnsWrapper {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 30px;
   @media screen and (min-width: 1025px) {
     display: none;
   }
