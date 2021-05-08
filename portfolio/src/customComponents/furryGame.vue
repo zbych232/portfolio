@@ -8,24 +8,24 @@
       ></div>
       <modal v-if="!isGameStarted">
         <template v-slot:title>
-          <h2 v-if="!isGameLost">Furry Game</h2>
-          <h2 v-else>Przegrana</h2></template
+          <h2 v-if="!isGameLost">Pikachu Game</h2>
+          <h2 v-else>Game Over</h2></template
         >
         <template v-slot:content>
           <p v-if="!isGameLost">
-            Steruj Furrym za pomocą strzałek.<br />
-            Postaraj się zebrać jak najwięcej monet. Powodzenia!
+            Direct the pikachu with the arrows.<br />
+            Try to collect as many points as possible. Good luck!
           </p>
 
-          <p v-else>Zebrałeś {{ score }} monet!<br />Spróbuj jeszcze raz!</p>
+          <p v-else>You got {{ score }} points!<br />Try again!</p>
           <md-button class="md-warning md-round" @click="startGame()"
-            >Rozpocznij grę</md-button
+            >Start the game</md-button
           >
         </template>
       </modal>
     </div>
     <div class="text-center score">
-      <h4>Wynik: {{ this.score }}</h4>
+      <h4>Score: {{ this.score }}</h4>
     </div>
     <div class="mobileBtnsWrapper">
       <div
@@ -247,13 +247,14 @@ export default {
 .furry {
   background-image: url("../assets/img/furryGame/furry.png");
   background-repeat: no-repeat;
-  background-size: 70%;
+  background-size: contain;
   background-position: center;
 }
 .coin {
   background-image: url("../assets/img/furryGame/coin.png");
-  background-size: 70%;
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: 50%;
 }
 @media screen and (max-width: 768px) {
   .cell {

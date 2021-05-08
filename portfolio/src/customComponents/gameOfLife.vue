@@ -13,27 +13,31 @@
         </template>
         <template v-slot:content>
           <p v-if="!isReproductionStopped">
-            Zbuduj swoją kolonię komórek klikając na planszę.<br />
-            Wybierz start i obserwuj jak komórki namnażają się!
+            Build your cell colony by clicking on the board.<br />
+            Choose a start and watch the cells multiply!
           </p>
           <div v-else>
             <p
               style="font-weight:800"
               v-bind:class="[timer > 30000 ? 'goodResult' : 'weakResult']"
             >
-              <span v-if="timer > 30000">Gratulacje! </span>
-              <span v-if="timer < 30000">Postaraj się bardziej. </span>
+              <span v-if="timer > 30000">Congratulations! </span>
+              <span v-if="timer < 30000"> Try again.</span>
               {{
                 moment(timer)
                   .lang("pl")
                   .format("mm:ss")
               }}
-              <span v-if="timer > 30000"> życia to dobry wynik.</span>
-              <span v-if="timer < 30000"> życia to słaby wynik.</span>
+              <span v-if="timer > 30000">
+                seconds of life is a good result.</span
+              >
+              <span v-if="timer < 30000">
+                seconds of life is a poor result.</span
+              >
             </p>
-            <p>Komórki przestały sie namnażać!</p>
+            <p>Cells stopped reproduction!</p>
             <p>
-              Stwórz im lepsze warunki i wybierz ponownie start.
+              Create better conditions for them and choose start again.
             </p>
           </div>
 
@@ -43,7 +47,7 @@
             <img style="width:60%" src="../assets/img/gameOfLife/giphy.gif" />
           </div>
           <md-button class="md-warning md-round" @click="startGame()"
-            >Rozpocznij grę</md-button
+            >Start the game</md-button
           >
         </template>
       </modal>

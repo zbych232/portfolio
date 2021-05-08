@@ -7,7 +7,7 @@
           class="contactFormContainer__iAmAvaliable__dotWrapper__innerDot"
         ></div>
       </div>
-      <p>I’m currently available for freelance work.</p>
+      <p>I’m currently available for work.</p>
     </div>
     <div class="contactFormContainer__form">
       <form>

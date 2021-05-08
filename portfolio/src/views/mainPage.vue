@@ -33,18 +33,13 @@
             >
               <h2>A bit about me 👋</h2>
               <p>
-                I am a freelance Web Developer with many years of experience
-                creating simple and modern designs from scratch using top-notch
-                technology. I put in my best effort to create a better platform
-                for clients, websites that are user-oriented, accessible, and
-                with fast loading speed. Whatever your business requirement is,
-                I’m dedicated to using my years of experience to pick the right
-                tools and processes in order to create a design that suits your
-                specific requirement. I recognize that creating a modern website
-                entails combining design, server technology, and the platform
-                that visitors and users interact with. I am also available to
-                join your team, and I'm willing to work efficiently and
-                thoroughly with your in-house team.
+                I am a Frontend Developer with 2 years of experience creating
+                modern and responsive websites from scratch using top frontend
+                frameworks. I am doing my best to create user oriented website
+                that is accessible, and with fast loading speed. I’m using my
+                experience to pick the right tools to create a design that suits
+                your specific requirement. I am available to join your team, and
+                I'm willing to work efficiently and thoroughly.
               </p>
               <md-button
                 class="md-white md-round md-lg"
@@ -88,13 +83,19 @@
                       :key="index"
                     ></div>
                   </div>
-                  <h4>High quality transport and logistic services</h4>
+                  <h4>Platform to find, hire and settle employees</h4>
                   <p>
-                    This project required me to put in all my experience as a
-                    full-stack developer to create a design and set themes for
-                    the website. It also required a smooth design that could
-                    work on different browsers, and I successfully achieved the
-                    goal.
+                    This is the most demanding project I have worked on so far.
+                    Employees apply for orders placed by employers. The process
+                    of settling employees is automatic. The employee is obliged
+                    to complete the health and safety training and complete the
+                    personal data before going to work. The employee must upload
+                    a report confirming the number of hours worked on the basis
+                    of which the employer receives an invoice to be paid.<br />
+                    This project required me to put in all my experience as
+                    frontend developer. The data sent from the backend had to be
+                    properly presented to the user, who could easily edit it.
+                    After that, the data was sent back in an appropriate form.
                   </p>
                 </div>
               </div>
@@ -106,7 +107,7 @@
                   alt="Rounded Image"
                 />
                 <div class="myProjectsSection__projectItem__textSection">
-                  <h3>Furry Game</h3>
+                  <h3>Pikachu Game</h3>
                   <div class="dotsSpacing">
                     <div
                       class="dotsSpacing__dot"
@@ -116,11 +117,10 @@
                   </div>
                   <h4>Simple JavaScript game</h4>
                   <p>
-                    This project required me to put in all my experience as a
-                    full-stack developer to create a design and set themes for
-                    the website. It also required a smooth design that could
-                    work on different browsers, and I successfully achieved the
-                    goal.
+                    This is one of the games I made in my spare time. Game is
+                    about catching Pikachu without hitting the edges of the
+                    board. It was written using Vue.js. The ability to work on
+                    arrays and objects was essential.
                   </p>
                 </div>
               </div>
@@ -135,7 +135,7 @@
                   alt="Rounded Image"
                 />
                 <div class="myProjectsSection__projectItem__textSection">
-                  <h3>Sprawdź za darmo</h3>
+                  <h3>Sprawdz za darmo</h3>
                   <div class="dotsSpacing">
                     <div
                       class="dotsSpacing__dot"
@@ -143,13 +143,12 @@
                       :key="index"
                     ></div>
                   </div>
-                  <h4>Wordpress Website</h4>
+                  <h4>Drone operator website</h4>
                   <p>
-                    This project required me to put in all my experience as a
-                    full-stack developer to create a design and set themes for
-                    the website. It also required a smooth design that could
-                    work on different browsers, and I successfully achieved the
-                    goal.
+                    This is my personal website through which I acquire
+                    customers looking for drone filming. The ability to work
+                    with Wordpress and the ability to put the page on the server
+                    was essential.
                   </p>
                 </div>
               </div>
@@ -170,12 +169,14 @@
                   ></div>
                 </div>
                 <h4 style="color:white">
-                  High quality transport and logistic services
+                  Task scheduler app
                 </h4>
                 <p style="color:white">
-                  This project required me to put in all my experience as a
-                  full-stack developer to create a design and set themes for the
-                  website.
+                  This is another project that I created in my spare time. The
+                  user adds tasks to his to-do list and manages them in a
+                  convenient way. The data is stored in the browser's memory. It
+                  was necessary to be able to use an external library to change
+                  the date of the task.
                 </p>
               </div>
             </div>
@@ -196,11 +197,12 @@
                   </div>
                   <h4>Simple JavaScript game</h4>
                   <p>
-                    This project required me to put in all my experience as a
-                    full-stack developer to create a design and set themes for
-                    the website. It also required a smooth design that could
-                    work on different browsers, and I successfully achieved the
-                    goal.
+                    This is another game that I made in my spare time. It
+                    presents the process of cells reproduction. It was written
+                    using Vue.js. It is a zero-player game, meaning that its
+                    evolution is determined by its initial state, requiring no
+                    further input. Ability to work on boards and objects was
+                    essential.
                   </p>
                 </div>
               </div>
@@ -215,7 +217,7 @@
                   alt="Rounded Image"
                 />
                 <div class="myProjectsSection__projectItem__textSection">
-                  <h3>Psychologia wokół nas</h3>
+                  <h3>Psycho_tresci</h3>
                   <div class="dotsSpacing">
                     <div
                       class="dotsSpacing__dot"
@@ -223,13 +225,12 @@
                       :key="index"
                     ></div>
                   </div>
-                  <h4>Wordpress Website</h4>
+                  <h4>Psychology blog</h4>
                   <p>
-                    This project required me to put in all my experience as a
-                    full-stack developer to create a design and set themes for
-                    the website. It also required a smooth design that could
-                    work on different browsers, and I successfully achieved the
-                    goal.
+                    The blog was created on the Wordpress platform. The user can
+                    easily add new posts and manage them. Home page built using
+                    Elementor plugin. Communication with the author via comments
+                    and a contact form.
                   </p>
                 </div>
               </div>
@@ -252,13 +253,13 @@
                       :key="index"
                     ></div>
                   </div>
-                  <h4>Wordpress Website</h4>
+                  <h4>Kindergarten website</h4>
                   <p>
-                    This project required me to put in all my experience as a
-                    full-stack developer to create a design and set themes for
-                    the website. It also required a smooth design that could
-                    work on different browsers, and I successfully achieved the
-                    goal.
+                    The website was created on the Wordpress platform. The user
+                    can easily add and manage news. Whole page built with
+                    Elementor plugin. Communication with the administrator via
+                    the contact form, phone or e-mail. Additionally, location on
+                    the google map and photo gallery.
                   </p>
                 </div>
               </div>
@@ -404,11 +405,10 @@
             <div class="getInTouchText">
               <h2>Get in Touch</h2>
               <p>
-                If you’re ever interested in learning about my work and my
-                working process with clients, please feel free to contact me
-                with information about the projects. We can set up a call or a
-                meet to discuss how I can utilize my skills in achieving the
-                success of your project.
+                If you’re ever interested in learning about my work please feel
+                free to contact me with information about the projects. We can
+                set up a call or a meet to discuss how I can utilize my skills
+                in achieving the success of your project.
               </p>
               <p>
                 You can find me in a few places on the web, but if if you prefer
