@@ -37,7 +37,7 @@
             </p>
             <p>Cells stopped reproduction!</p>
             <p>
-              Create better conditions for them and choose start again.
+              Create better conditions for them and choose to start again.
             </p>
           </div>
 

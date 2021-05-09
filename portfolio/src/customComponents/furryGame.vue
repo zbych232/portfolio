@@ -13,7 +13,7 @@
         >
         <template v-slot:content>
           <p v-if="!isGameLost">
-            Direct the pikachu with the arrows.<br />
+            Direct the Pikachu with the arrows.<br />
             Try to collect as many points as possible. Good luck!
           </p>
 

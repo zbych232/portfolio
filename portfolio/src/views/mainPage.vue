@@ -35,8 +35,8 @@
               <p>
                 I am a Frontend Developer with 2 years of experience creating
                 modern and responsive websites from scratch using top frontend
-                frameworks. I am doing my best to create user oriented website
-                that is accessible, and with fast loading speed. I’m using my
+                frameworks. I am doing my best to create a user-oriented website
+                that is accessible and with fast loading speed. I’m using my
                 experience to pick the right tools to create a design that suits
                 your specific requirement. I am available to join your team, and
                 I'm willing to work efficiently and thoroughly.
@@ -92,7 +92,7 @@
                     personal data before going to work. The employee must upload
                     a report confirming the number of hours worked on the basis
                     of which the employer receives an invoice to be paid.<br />
-                    This project required me to put in all my experience as
+                    This project required me to put in all my experience as a
                     frontend developer. The data sent from the backend had to be
                     properly presented to the user, who could easily edit it.
                     After that, the data was sent back in an appropriate form.
@@ -117,8 +117,8 @@
                   </div>
                   <h4>Simple JavaScript game</h4>
                   <p>
-                    This is one of the games I made in my spare time. Game is
-                    about catching Pikachu without hitting the edges of the
+                    This is one of the games I made in my spare time. The game
+                    is about catching Pikachu without hitting the edges of the
                     board. It was written using Vue.js. The ability to work on
                     arrays and objects was essential.
                   </p>
@@ -147,7 +147,7 @@
                   <p>
                     This is my personal website through which I acquire
                     customers looking for drone filming. The ability to work
-                    with Wordpress and the ability to put the page on the server
+                    with WordPress and the ability to put the page on the server
                     was essential.
                   </p>
                 </div>
@@ -201,7 +201,7 @@
                     presents the process of cells reproduction. It was written
                     using Vue.js. It is a zero-player game, meaning that its
                     evolution is determined by its initial state, requiring no
-                    further input. Ability to work on boards and objects was
+                    further input. The ability to work on boards and objects was
                     essential.
                   </p>
                 </div>
@@ -227,10 +227,10 @@
                   </div>
                   <h4>Psychology blog</h4>
                   <p>
-                    The blog was created on the Wordpress platform. The user can
+                    The blog was created on the WordPress platform. The user can
                     easily add new posts and manage them. Home page built using
                     Elementor plugin. Communication with the author via comments
-                    and a contact form.
+                    and a contact form. essential.
                   </p>
                 </div>
               </div>
@@ -255,11 +255,11 @@
                   </div>
                   <h4>Kindergarten website</h4>
                   <p>
-                    The website was created on the Wordpress platform. The user
-                    can easily add and manage news. Whole page built with
-                    Elementor plugin. Communication with the administrator via
-                    the contact form, phone or e-mail. Additionally, location on
-                    the google map and photo gallery.
+                    The website was created on the WordPress platform. The user
+                    can easily add and manage the news. The whole page built
+                    with Elementor plugin. Communication with the administrator
+                    via the contact form, phone or e-mail. Additionally,
+                    location on the google map and photo gallery.
                   </p>
                 </div>
               </div>
@@ -412,7 +412,7 @@
               </p>
               <p>
                 You can find me in a few places on the web, but if if you prefer
-                to do it the "old way" then just write to me message.
+                to do it the "old way" then just write to me a message.
               </p>
             </div>
           </div>
