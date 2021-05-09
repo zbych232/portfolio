@@ -63,10 +63,10 @@
         >
       </form>
       <span v-if="formSendSuccesfully" style="color:#4caf50"
-        >Wysłano pomyślnie wiadomość</span
+        >Message sent successfully!</span
       >
       <span v-if="formSendSuccesfully == false" style="color:#f44336"
-        >Błąd serwera. Nie wysłano wiadomości.</span
+        >Server error. The message was not sent.</span
       >
     </div>
   </div>
