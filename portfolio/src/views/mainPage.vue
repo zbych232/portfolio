@@ -230,7 +230,7 @@
                     The blog was created on the WordPress platform. The user can
                     easily add new posts and manage them. Home page built using
                     Elementor plugin. Communication with the author via comments
-                    and a contact form. essential.
+                    and a contact form.
                   </p>
                 </div>
               </div>
