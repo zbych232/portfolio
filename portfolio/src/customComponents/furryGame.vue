@@ -247,14 +247,14 @@ export default {
 .furry {
   background-image: url("../assets/img/furryGame/furry.png");
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center;
+  background-size: 70%;
 }
 .coin {
   background-image: url("../assets/img/furryGame/coin.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50%;
+  background-size: contain;
 }
 @media screen and (max-width: 768px) {
   .cell {
