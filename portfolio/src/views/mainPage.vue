@@ -68,6 +68,28 @@
         </div>
         <div class="md-layout">
           <div class="md-size-50  md-xsmall-size-100 md-layout-item">
+            <a href="https://fir-508b2.web.app/">
+              <div class="myProjectsSection__projectItem text-center">
+                <img
+                  src="../assets/img/socialApp/socialApp.png"
+                  alt="Rounded Image"
+                />
+                <div class="myProjectsSection__projectItem__textSection">
+                  <h3>Social App</h3>
+                  <div class="dotsSpacing">
+                    <div
+                      class="dotsSpacing__dot"
+                      v-for="(element, index) in dots"
+                      :key="index"
+                    ></div>
+                  </div>
+                  <h4>Social media app</h4>
+                  <p>
+                   Fully-featured social media application using React, Firebase, Redux, Express, and Material-UI.
+                  </p>
+                </div>
+              </div>
+            </a>
             <a href="https://incpraca.pl">
               <div class="myProjectsSection__projectItem text-center">
                 <img
