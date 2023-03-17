@@ -33,7 +33,7 @@
             >
               <h2>A bit about me 👋</h2>
               <p>
-                I am a Frontend Developer with 2 years of experience creating
+                I am a Frontend Developer creating
                 modern and responsive websites from scratch using top frontend
                 frameworks. I am doing my best to create a user-oriented website
                 that is accessible and with fast loading speed. I’m using my
